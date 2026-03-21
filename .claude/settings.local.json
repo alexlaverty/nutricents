@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import openpyxl; print\\(''openpyxl available''\\)\")",
+      "Bash(python3 -c \"import xlrd; print\\(''xlrd available''\\)\")",
+      "Bash(python3 -c \"import pandas; print\\(''pandas available''\\)\")",
+      "Bash(python3 -m pip install openpyxl pandas --quiet)",
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(python scripts/afcd_query.py search \"oats rolled\")",
+      "Bash(python scripts/afcd_query.py key-nutrients \"salmon pink canned\")",
+      "Bash(python scripts/afcd_query.py search \"salmon canned\")",
+      "Bash(python scripts/afcd_query.py key-nutrients \"Salmon, pink, canned\")",
+      "Bash(python -c \":*)",
+      "Bash(python scripts/afcd_query.py top-by-nutrient \"Iron\" --n=10)",
+      "Bash(python scripts/afcd_query.py value-for-money \"Oats, rolled, uncooked\" 0.45)",
+      "Bash(python scripts/afcd_query.py top-by-nutrient \"selenium\" --n=8)",
+      "Bash(python scripts/afcd_query.py compare \"oats\" \"brown rice\" \"lentil red\")",
+      "Bash(python scripts/afcd_query.py search \"broccoli\")",
+      "Bash(python scripts/afcd_query.py find-column \"omega\")"
+    ]
+  }
+}

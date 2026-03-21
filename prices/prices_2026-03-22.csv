@@ -1,0 +1,25 @@
+date,store,product_name,product_id,category,unit,unit_size,price_aud,price_per_100g,on_special,special_price_aud,source_url
+2026-03-22,ALDI,Oats Rolled,aldi-oats-rolled-1kg,pantry,kg,1000,2.49,0.249,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Banana Cavendish,aldi-banana-kg,fruit-veg,kg,1000,2.49,0.249,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Natural Yoghurt Full Fat 500g,aldi-yoghurt-natural-500g,dairy-eggs,g,500,2.99,0.598,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Full Fat Milk 2L,aldi-milk-full-fat-2l,dairy-eggs,L,2000,2.59,0.130,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Carrot 1kg Bag,aldi-carrot-1kg,fruit-veg,kg,1000,1.29,0.129,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Diced Tomatoes Canned 400g,aldi-diced-tomatoes-400g,pantry,g,400,0.89,0.223,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Brown Onion 1kg,aldi-brown-onion-1kg,fruit-veg,kg,1000,1.29,0.129,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Brown Rice 1kg,aldi-brown-rice-1kg,pantry,kg,1000,2.29,0.229,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Frozen Peas 1kg,aldi-frozen-peas-1kg,pantry,kg,1000,1.89,0.189,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Red Lentils 500g,aldi-red-lentils-500g,pantry,g,500,1.99,0.398,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Olive Oil Extra Virgin 500mL,aldi-olive-oil-500ml,pantry,mL,500,4.49,0.898,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,Coles,Broccoli Whole,coles-broccoli-whole,fruit-veg,each,500,1.50,0.300,true,2.50,https://www.coles.com.au/on-special/fruit-vegetables
+2026-03-22,Coles,John West Pink Salmon 95g,coles-john-west-salmon-95g,pantry,g,95,2.20,2.316,false,,https://www.coles.com.au/browse/pantry
+2026-03-22,Coles,Garlic 3 Bulb Pack,coles-garlic-3pk,fruit-veg,each,150,1.50,1.000,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-03-22,Coles,Eggs Free Range 12pk,coles-eggs-free-range-12pk,dairy-eggs,each,12,5.50,0.917,false,,https://www.coles.com.au/browse/dairy-eggs-fridge
+2026-03-22,Coles,Baby Spinach 120g,coles-baby-spinach-120g,fruit-veg,g,120,3.00,2.500,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-03-22,Coles,Chicken Breast 1kg,coles-chicken-breast-1kg,meat-seafood,kg,1000,12.00,1.200,false,,https://www.coles.com.au/browse/meat-seafood
+2026-03-22,Coles,Sweet Potato 1kg,coles-sweet-potato-1kg,fruit-veg,kg,1000,2.50,0.250,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-03-22,Coles,Chickpeas Canned 400g,coles-chickpeas-canned-400g,pantry,g,400,1.20,0.300,false,,https://www.coles.com.au/browse/pantry
+2026-03-22,Coles,Cabbage White Half,coles-cabbage-white-half,fruit-veg,each,700,1.50,0.214,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-03-22,Woolworths,Canned Tuna in Water 95g,ww-tuna-water-95g,pantry,g,95,1.50,1.579,true,2.00,https://www.woolworths.com.au/shop/specials/
+2026-03-22,Woolworths,Frozen Salmon Fillets 400g,ww-frozen-salmon-400g,meat-seafood,g,400,7.00,1.750,true,10.00,https://www.woolworths.com.au/shop/specials/
+2026-03-22,Woolworths,Greek Yoghurt 500g,ww-greek-yoghurt-500g,dairy-eggs,g,500,4.00,0.800,false,,https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge
+2026-03-22,Woolworths,Broccoli Whole,ww-broccoli-whole,fruit-veg,each,500,2.00,0.400,false,,https://www.woolworths.com.au/shop/browse/fruit-veg

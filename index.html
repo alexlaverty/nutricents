@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriCents — Cheapest Nutritious Meals for Australians</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --surface2: #222222;
+      --border: #2a2a2a;
+      --accent: #4ecca3;
+      --accent-dim: rgba(78,204,163,0.12);
+      --text: #e8e8e8;
+      --text-muted: #888888;
+      --text-dim: #555555;
+      --white: #ffffff;
+      --radius: 14px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(180deg, #090909 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f0f0f;
+    }
+
+    .logo-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-name span { color: var(--accent); }
+
+    .hero-description {
+      max-width: 560px;
+      margin: 0 auto 32px;
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .hero-description strong { color: var(--accent); }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ── Principles ── */
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .principle-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+
+    .principle-icon { font-size: 20px; margin-bottom: 8px; }
+    .principle-title { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .principle-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    /* ── Meal plan list ── */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .plans-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .plans-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .plans-count {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ── Plan card ── */
+    .plan-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+
+    .plan-card:hover {
+      border-color: rgba(78,204,163,0.4);
+      background: #1e1e1e;
+      transform: translateY(-1px);
+    }
+
+    .plan-card-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .plan-meta {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .plan-date {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+
+    .plan-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .plan-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .badge.green { border-color: rgba(78,204,163,0.35); color: var(--accent); background: var(--accent-dim); }
+
+    .plan-numbers {
+      display: flex;
+      gap: 24px;
+      flex-shrink: 0;
+      align-items: center;
+    }
+
+    .plan-number {
+      text-align: center;
+    }
+
+    .plan-number-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .plan-number-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .plan-arrow {
+      font-size: 20px;
+      color: var(--text-dim);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .plan-card:hover .plan-arrow {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
+    /* ── Empty state ── */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-state h3 { color: var(--white); margin-bottom: 8px; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-dim);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 16px 36px; }
+      .hero-stats { gap: 20px; }
+      .plan-numbers { gap: 16px; }
+      .plan-card { padding: 18px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<header class="hero">
+  <div class="logo">
+    <div class="logo-mark">N</div>
+    <div class="logo-name">Nutri<span>Cents</span></div>
+  </div>
+  <p class="hero-description">
+    The <strong>absolute healthiest meals</strong> for the <strong>absolute lowest price</strong> — designed for Sydney, Australia.
+    Every meal plan is optimised across nutrition quality and grocery cost simultaneously, using real supermarket prices and AFCD laboratory data.
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value">&lt;$7</div>
+      <div class="hero-stat-label">Per Day Target</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">3</div>
+      <div class="hero-stat-label">Meals Per Plan</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">6</div>
+      <div class="hero-stat-label">Health Targets</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">AFCD</div>
+      <div class="hero-stat-label">Nutrient Source</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════ PRINCIPLES ══════════════════════ -->
+<section class="principles">
+  <div class="principle-card">
+    <div class="principle-icon">❤️</div>
+    <div class="principle-title">Cardiovascular Health</div>
+    <div class="principle-desc">Omega-3s, potassium, magnesium, polyphenols, and soluble fibre in every plan.</div>
+  </div>
+  <div class="principle-card">
+    <div class="principle-icon">🛡️</div>
+    <div class="principle-title">Anti-Cancer Foods</div>
+    <div class="principle-desc">Cruciferous vegetables, lycopene, allicin, and antioxidant-rich ingredients daily.</div>
+  </div>
+  <div class="principle-card">
+    <div class="principle-icon">📊</div>
+    <div class="principle-title">Low GI Always</div>
+    <div class="principle-desc">Legumes, wholegrains, and vegetables keep blood sugar stable all day.</div>
+  </div>
+  <div class="principle-card">
+    <div class="principle-icon">💰</div>
+    <div class="principle-title">Real Sydney Prices</div>
+    <div class="principle-desc">Prices scraped from Coles, Woolworths, and ALDI. On-specials prioritised.</div>
+  </div>
+  <div class="principle-card">
+    <div class="principle-icon">🧬</div>
+    <div class="principle-title">AFCD Data</div>
+    <div class="principle-desc">All nutrient values from Australian Food Composition Database Release 3.</div>
+  </div>
+  <div class="principle-card">
+    <div class="principle-icon">🔄</div>
+    <div class="principle-title">Varied Over Time</div>
+    <div class="principle-desc">Each plan rotates ingredients to ensure complete nutrition across the week.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PLANS LIST ══════════════════════ -->
+<main>
+  <div class="plans-header">
+    <h2 class="plans-title">Daily Meal Plans</h2>
+    <span class="plans-count">1 plan generated</span>
+  </div>
+
+  <!-- 2026-03-22 -->
+  <a class="plan-card" href="recipes/2026-03-22.html">
+    <div class="plan-card-inner">
+      <div class="plan-meta">
+        <div class="plan-date">Sunday 22 March 2026</div>
+        <div class="plan-name">Oat Porridge · Red Lentil Dal · Garlic Salmon Bowl</div>
+        <div class="plan-badges">
+          <span class="badge green">❤️ Cardiovascular</span>
+          <span class="badge green">🛡️ Anti-Cancer</span>
+          <span class="badge green">☀️ Vitamin D</span>
+          <span class="badge green">🐟 Omega-3s</span>
+          <span class="badge green">📉 LDL</span>
+          <span class="badge green">📊 Low GI</span>
+        </div>
+      </div>
+      <div class="plan-numbers">
+        <div class="plan-number">
+          <div class="plan-number-value">$6.19</div>
+          <div class="plan-number-label">Daily Cost</div>
+        </div>
+        <div class="plan-number">
+          <div class="plan-number-value">1,610</div>
+          <div class="plan-number-label">kcal</div>
+        </div>
+        <div class="plan-arrow">→</div>
+      </div>
+    </div>
+  </a>
+
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer>
+  <p>Nutrient data: <strong style="color:var(--text-muted)">AFCD Release 3</strong>, Food Standards Australia New Zealand (FSANZ)</p>
+  <p>RDI values: Australian Nutrient Reference Values (NRVs), NHMRC &nbsp;·&nbsp; Prices: Coles, Woolworths, ALDI (Sydney, Australia)</p>
+</footer>
+
+</body>
+</html>
