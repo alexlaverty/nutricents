@@ -73,7 +73,7 @@ Every recipe and meal plan must holistically target ALL of the following health 
 | Goal | Key Nutrients / Foods |
 |------|----------------------|
 | **Cardiovascular health** | Omega-3s, potassium, magnesium, fibre, polyphenols, oats, salmon, nuts, legumes |
-| **Low blood pressure** | Potassium, magnesium, calcium, low sodium, beetroot, leafy greens, garlic |
+| **Low blood pressure** | Potassium, magnesium, calcium, **low sodium (target &lt;1,500mg/day total)**, beetroot, leafy greens, garlic |
 | **Anti-cancer properties** | Cruciferous vegetables (broccoli, cabbage, kale), lycopene (tomatoes), allicin (garlic/onion), antioxidants (vitamins C, E, selenium) |
 | **Lower LDL cholesterol** | Soluble fibre (oats, legumes, barley), plant sterols, healthy fats (olive oil, avocado, nuts), omega-3s |
 | **Low sugar** | Avoid refined sugars, minimise high-GI ingredients, favour whole foods |
@@ -108,6 +108,34 @@ Each recipe must include:
 - Use legumes, eggs, canned fish, oats, frozen vegetables, and seasonal produce as budget superfoods
 - Avoid expensive items unless they provide irreplaceable nutritional value
 - Consider bulk buys when price-per-100g is significantly lower (note this in the recipe)
+
+### Dietary Requirement — Low Sodium (STRICT)
+The user requires a **low sodium diet** to support healthy blood pressure. This is a hard constraint:
+- **Daily sodium target: ≤ 1,500mg** (well below the Australian AI of 2,000mg)
+- **Per-meal target: ≤ 500mg sodium** — always calculate and display sodium per meal
+- **Avoid high-sodium ingredients:** processed meats (bacon, ham, salami), regular soy sauce, stock cubes, canned goods with added salt, pickled foods, most condiments, table salt additions
+- **Prefer:** fresh or frozen vegetables (unsalted), dried legumes (no added salt), fresh herbs and spices for flavour instead of salt
+- **Swap high-sodium for low-sodium versions:**
+  - Low-sodium soy sauce (e.g. Kikkoman Less Salt) instead of regular
+  - No-added-salt canned tomatoes instead of regular canned tomatoes
+  - No-added-salt canned legumes (chickpeas, lentils) instead of regular
+  - Canned fish in water (lower sodium than brine) where possible
+- **Flag sodium content clearly** in every recipe — show mg per meal and % of daily 1,500mg target
+- **Boost potassium** alongside reducing sodium — the K:Na ratio is as important as sodium alone; prioritise bananas, sweet potato, spinach, lentils, salmon
+- Use lemon juice, fresh garlic, herbs (parsley, basil, coriander), spices (cumin, turmeric, paprika, pepper) and vinegar as flavour alternatives to salt
+
+### Dietary Requirement — Lactose Intolerance (STRICT)
+The user is **severely lactose intolerant**. This is a hard constraint that overrides all other ingredient choices:
+- **NEVER use** regular milk, regular yoghurt, regular cheese, cream, butter, or any standard dairy product
+- **ALWAYS use** lactose-free alternatives when dairy nutrition is needed:
+  - Lactose-free milk (e.g. Zymil, ALDI Lact-Free) instead of regular milk
+  - Lactose-free yoghurt (e.g. Jalna Lactose Free, Zymil) instead of regular yoghurt
+  - Lactose-free cheese where cheese is called for
+  - Plant-based milks (oat milk, soy milk, almond milk) are also acceptable
+- Hard aged cheeses (parmesan, cheddar, pecorino) are naturally very low in lactose and **may** be used in small quantities as a flavour addition only — note this explicitly in the recipe
+- Canned fish (salmon, sardines, tuna) remains the best budget source of calcium — prefer these over dairy
+- Eggs, leafy greens, broccoli, and canned salmon (with bones) should be prioritised as non-dairy calcium sources
+- Always label lactose-free products clearly in the ingredient list (e.g. "Lactose-free milk — Zymil")
 
 ---
 

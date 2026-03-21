@@ -65,6 +65,7 @@ It combines nutrition science, grocery pricing, and optimization algorithms to a
   * High Protein (Muscle Building)
   * Heart Healthy
   * Under $X per meal
+  * **Lactose-Free** (all meal plans use lactose-free dairy or dairy-free alternatives by default)
 
 * **Micro-Nutrient Visuals**
   Each recipe shows:

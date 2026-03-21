@@ -73,6 +73,8 @@ Design Breakfast, Lunch, and Dinner **holistically** — they work as a system f
 - Use on-special items where possible (highest priority)
 - Share ingredients across meals where it reduces waste and cost
 - Use Australian food terminology and seasonal awareness
+- **STRICT — LACTOSE FREE:** The user is severely lactose intolerant. NEVER use regular milk, regular yoghurt, regular cheese, cream, or butter. ONLY use lactose-free dairy (Zymil, Jalna Lactose Free, ALDI Lact-Free) or plant-based alternatives (oat milk, soy milk). Hard aged cheeses in tiny amounts are acceptable but must be flagged. Prefer canned salmon/sardines, eggs, broccoli, and leafy greens for calcium instead of dairy.
+- **STRICT — LOW SODIUM:** Daily sodium target is ≤1,500mg (≤500mg per meal). Never add table salt. Use no-added-salt canned goods (tomatoes, legumes). Use low-sodium soy sauce only. Avoid processed meats, stock cubes, and high-sodium condiments. Flavour with garlic, lemon, herbs, and spices instead. Show sodium (mg) and % of 1,500mg daily target prominently in every meal's nutrient breakdown.
 
 **For each meal, prepare:**
 - Recipe name (descriptive, health-benefit-focused)
