@@ -28,24 +28,71 @@ Always fetch **current prices** from Australian supermarkets before generating r
 
 ### Primary Sources (Sydney-based)
 
-| Store | Everyday Browse URLs | On-Special URLs |
-|-------|---------------------|-----------------|
-| **Coles** | `https://www.coles.com.au/browse/meat-seafood` | `https://www.coles.com.au/on-special/meat-seafood` |
-| | `https://www.coles.com.au/browse/fruit-vegetables` | `https://www.coles.com.au/on-special/fruit-vegetables` |
-| | `https://www.coles.com.au/browse/dairy-eggs-fridge` | `https://www.coles.com.au/on-special/dairy-eggs-fridge` |
-| | `https://www.coles.com.au/browse/pantry` | `https://www.coles.com.au/on-special/pantry` |
-| **Woolworths** | `https://www.woolworths.com.au/shop/browse/meat-poultry-seafood` | `https://www.woolworths.com.au/shop/specials/` |
-| | `https://www.woolworths.com.au/shop/browse/fruit-veg` | |
-| | `https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge` | |
-| | `https://www.woolworths.com.au/shop/browse/pantry` | |
-| **ALDI** | `https://www.aldi.com.au/en/groceries/` | `https://www.aldi.com.au/en/specials/` |
-| **IGA** | `https://www.igashop.com.au/` | |
+**Coles**
 
-**Priority:** Always check on-special prices first — they directly affect which recipes are cheapest today.
+| Type | URL |
+|------|-----|
+| On-special — meat/seafood | `https://www.coles.com.au/on-special/meat-seafood` |
+| On-special — fruit/veg | `https://www.coles.com.au/on-special/fruit-vegetables` |
+| On-special — dairy/eggs | `https://www.coles.com.au/on-special/dairy-eggs-fridge` |
+| On-special — pantry | `https://www.coles.com.au/on-special/pantry` |
+| Everyday — fruit/veg | `https://www.coles.com.au/browse/fruit-vegetables` |
+| Everyday — dairy/eggs | `https://www.coles.com.au/browse/dairy-eggs-fridge` |
+| Everyday — pantry | `https://www.coles.com.au/browse/pantry` |
+| Everyday — meat/seafood | `https://www.coles.com.au/browse/meat-seafood` |
+
+**Woolworths**
+
+| Type | URL |
+|------|-----|
+| Specials — fruit/veg | `https://www.woolworths.com.au/shop/browse/fruit-veg/fruit-veg-specials` |
+| Specials — meat/seafood | `https://www.woolworths.com.au/shop/browse/poultry-meat-seafood/poultry-meat-seafood-specials` |
+| Specials — half price | `https://www.woolworths.com.au/shop/browse/specials/half-price` |
+| Everyday — fruit/veg | `https://www.woolworths.com.au/shop/browse/fruit-veg` |
+| Everyday — dairy/eggs | `https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge` |
+| Everyday — pantry | `https://www.woolworths.com.au/shop/browse/pantry` |
+| Everyday — meat/seafood | `https://www.woolworths.com.au/shop/browse/meat-poultry-seafood` |
+
+**ALDI**
+
+| Type | URL |
+|------|-----|
+| Fruit & vegetables | `https://www.aldi.com.au/products/fruits-vegetables/k/950000000` |
+| Meat & seafood | `https://www.aldi.com.au/products/meat-seafood/k/940000000` |
+| Dairy, eggs & fridge | `https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000` |
+| Lower prices (everyday deals) | `https://www.aldi.com.au/products/lower-prices/k/1588161425841179` |
+| Super savers | `https://www.aldi.com.au/products/super-savers/k/1588161426952145` |
+| Limited time only (specials) | `https://www.aldi.com.au/products/limited-time-only/k/1588161420755352` |
+
+**IGA**
+
+| Type | URL |
+|------|-----|
+| Browse all | `https://www.igashop.com.au/` |
+
+**Priority:** Always check on-special / specials / limited-time / super-saver pages first — they directly affect which recipes are cheapest today.
+
+### Price Integrity Rules — CRITICAL
+
+**Never estimate or fabricate prices. Only use prices you have personally verified by fetching the store's website.**
+
+- If you cannot retrieve a verified price for an ingredient (page blocked, product not found, etc.), **leave the price blank** in the recipe and note it as "price unavailable — check in-store"
+- Do NOT fall back to guessing, approximating from memory, or using "typical" prices
+- A recipe with some blank prices is far better than a recipe with fabricated prices that mislead the user
+- Always use Chrome (via browser tool) to load grocery store pages and extract real prices — do not assume prices from training data
+
+### Price Caching — Same-Day Reuse
+
+Before fetching any store's prices, check whether `prices/prices_YYYY-MM-DD.csv` already exists for today:
+
+- If the CSV exists and already contains rows for a given store, **do not re-fetch that store's pages** — use the cached prices directly
+- This avoids redundant web requests when the skill is run multiple times in one day
+- If a store is missing from today's CSV entirely, fetch it and append the results
+- Receipt-verified prices (source field contains `receipt-`) are always trusted and never need re-fetching
 
 ### Price Saving Rules
 
-When prices are scraped or looked up, **always save them** to a CSV file:
+When prices are fetched and verified, **always save them** to a CSV file:
 
 **Path:** `prices/prices_YYYY-MM-DD.csv`
 
@@ -61,8 +108,9 @@ date,store,product_name,product_id,category,unit,unit_size,price_aud,price_per_1
 - `price_per_100g` — normalised cost for comparison (calculate from price and unit size)
 - `on_special` — `true` or `false`
 - `special_price_aud` — original price if on special, else blank
+- `source_url` — exact URL the price was retrieved from (or `receipt-STORE-YYYY-MM-DD` for receipt-verified prices)
 
-Always append to the file for today's date if it already exists (do not duplicate rows).
+Always append to the file for today's date if it already exists (do not duplicate rows by product_id).
 
 ---
 
@@ -172,11 +220,12 @@ See `Screenshot.png` for the target aesthetic:
 - Must be updated every time a new recipe page is generated
 
 ### Daily Recipe Page (`recipes/YYYY-MM-DD.html`)
-- Shows all 3 meals for that day
+- Shows **all meals generated for that day** — the skill may be run multiple times in a day, and each run appends a new set of 3 meals to the same file
 - Each meal displayed as a card with all required recipe fields
 - Nutrient coverage shown as visual progress bars (HTML/CSS only, no JS charts)
-- Shopping list section at the bottom (all ingredients consolidated, with store + price)
+- Shopping list section at the bottom (all ingredients consolidated across all meals in the file, with store + price)
 - "Back to all meals" link to `index.html`
+- If the file already exists when the skill runs, **append** the new meal cards after the existing ones — do not overwrite
 
 ---
 
@@ -197,13 +246,14 @@ A custom Claude skill exists at `.claude/commands/generate-recipes.md`.
 Run it with: `/generate-recipes`
 
 This skill will:
-1. Fetch current prices from supermarket websites
-2. Save prices to `prices/prices_YYYY-MM-DD.csv`
+1. Check today's prices CSV — reuse cached prices for any store already fetched today
+2. Fetch prices (via Chrome) from stores not yet cached — save real verified prices only, never estimates
 3. Review the AFCD nutrient database
-4. Review all previously generated recipe HTML files in `recipes/`
-5. Generate 3 optimised meals for today (holistic, cheapest + broadest nutrition)
-6. Write `recipes/YYYY-MM-DD.html`
-7. Update `index.html`
+4. Review all previously generated recipe HTML files in `recipes/` for variety/rotation
+5. If today's recipe file already exists, read the existing meals and account for their nutrition holistically
+6. Generate 3 new optimised meals that complement today's existing meals (or provide maximum breadth if none exist yet)
+7. Append the new meal cards to `recipes/YYYY-MM-DD.html` (create if new, append if exists)
+8. Update `index.html`
 
 ---
 

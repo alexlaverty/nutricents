@@ -3,12 +3,12 @@ date,store,product_name,product_id,category,unit,unit_size,price_aud,price_per_1
 2026-03-22,ALDI,Banana Cavendish,aldi-banana-kg,fruit-veg,kg,1000,2.49,0.249,false,,https://www.aldi.com.au/en/groceries/
 2026-03-22,ALDI,Natural Yoghurt Full Fat 500g,aldi-yoghurt-natural-500g,dairy-eggs,g,500,2.99,0.598,false,,https://www.aldi.com.au/en/groceries/
 2026-03-22,ALDI,Full Fat Milk 2L,aldi-milk-full-fat-2l,dairy-eggs,L,2000,2.59,0.130,false,,https://www.aldi.com.au/en/groceries/
-2026-03-22,ALDI,Carrot 1kg Bag,aldi-carrot-1kg,fruit-veg,kg,1000,1.29,0.129,false,,https://www.aldi.com.au/en/groceries/
-2026-03-22,ALDI,Diced Tomatoes Canned 400g,aldi-diced-tomatoes-400g,pantry,g,400,0.89,0.223,false,,https://www.aldi.com.au/en/groceries/
-2026-03-22,ALDI,Brown Onion 1kg,aldi-brown-onion-1kg,fruit-veg,kg,1000,1.29,0.129,false,,https://www.aldi.com.au/en/groceries/
-2026-03-22,ALDI,Brown Rice 1kg,aldi-brown-rice-1kg,pantry,kg,1000,2.29,0.229,false,,https://www.aldi.com.au/en/groceries/
-2026-03-22,ALDI,Frozen Peas 1kg,aldi-frozen-peas-1kg,pantry,kg,1000,1.89,0.189,false,,https://www.aldi.com.au/en/groceries/
-2026-03-22,ALDI,Red Lentils 500g,aldi-red-lentils-500g,pantry,g,500,1.99,0.398,false,,https://www.aldi.com.au/en/groceries/
+2026-03-22,ALDI,Carrot 1kg Bag,aldi-carrot-1kg,fruit-veg,kg,1000,1.99,0.199,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Bellino Diced Tomatoes 200g,aldi-bellino-tomatoes-200g,pantry,g,200,2.49,1.245,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Brown Onion 1kg,aldi-brown-onion-1kg,fruit-veg,kg,1000,2.99,0.299,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Brown Rice 1kg,aldi-brown-rice-1kg,pantry,kg,1000,2.49,0.249,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Baby Peas 1kg,aldi-baby-peas-1kg,fruit-veg,kg,1000,3.99,0.399,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Red Lentils 500g,aldi-red-lentils-500g,pantry,g,500,1.69,0.338,false,,receipt-aldi-balgowlah-2026-03-22
 2026-03-22,ALDI,Olive Oil Extra Virgin 500mL,aldi-olive-oil-500ml,pantry,mL,500,4.49,0.898,false,,https://www.aldi.com.au/en/groceries/
 2026-03-22,Coles,Broccoli Whole,coles-broccoli-whole,fruit-veg,each,500,1.50,0.300,true,2.50,https://www.coles.com.au/on-special/fruit-vegetables
 2026-03-22,Coles,John West Pink Salmon 95g,coles-john-west-salmon-95g,pantry,g,95,2.20,2.316,false,,https://www.coles.com.au/browse/pantry
@@ -34,3 +34,19 @@ date,store,product_name,product_id,category,unit,unit_size,price_aud,price_per_1
 2026-03-22,Coles,Mutti Polpa Tomatoes Finely Chopped 400g,coles-mutti-polpa-400g,pantry,g,400,1.60,0.400,true,2.50,https://www.coles.com.au/on-special/pantry
 2026-03-22,Coles,Bega Peanut Butter Smooth 470g,coles-bega-pb-smooth-470g,pantry,g,470,5.50,1.170,true,7.00,https://www.coles.com.au/on-special/pantry
 2026-03-22,Coles,John West Tuna Chunky Springwater 95g,coles-jw-tuna-spring-95g,pantry,g,95,2.90,3.053,true,3.50,https://www.coles.com.au/on-special/pantry
+2026-03-22,ALDI,Chicken Thigh Bulk Raw (weight varies),aldi-chicken-thigh-bulk-rw,meat-seafood,kg,1000,14.59,1.459,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Frozen Marinated Chicken Wings 1.5kg,aldi-frmntd-ckn-wings-1.5kg,meat-seafood,kg,1500,13.49,0.899,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Pork Mince 500g,aldi-pork-mince-500g,meat-seafood,g,500,4.99,0.998,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Whiting Fillets 1kg,aldi-sb-whiting-fillet-1kg,meat-seafood,kg,1000,9.99,0.999,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Long Grain White Rice 2kg,aldi-long-grain-rice-2kg,pantry,kg,2000,3.59,0.180,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Mixed Nuts 400g,aldi-mixed-nuts-dr-400g,pantry,g,400,10.99,2.748,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Tuna Infused 95g,aldi-tuna-infused-95g,pantry,g,95,1.29,1.358,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Gold Sweet Potato per kg,aldi-gold-sweet-potato-kg,fruit-veg,kg,1000,3.99,0.399,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Lemons 5 pack,aldi-lemons-5pk,fruit-veg,each,500,3.99,0.798,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Sweet Corn 500g,aldi-sweet-corn-500g,fruit-veg,g,500,3.99,0.798,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Green Beans 375g,aldi-green-beans-375g,fruit-veg,g,375,3.49,0.931,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Zucchini per kg,aldi-zucchini-per-kg,fruit-veg,kg,1000,4.99,0.499,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Red Grapes per kg,aldi-red-grapes-per-kg,fruit-veg,kg,1000,3.79,0.379,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Baby Spinach 280g,aldi-baby-spinach-280g,fruit-veg,g,280,3.99,1.425,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Eggs Free Range 600g (approx 10 eggs),aldi-eggs-free-range-600g,dairy-eggs,g,600,5.99,0.998,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-22,ALDI,Coconut Water 1L,aldi-coconut-water-1l,pantry,L,1000,2.59,0.259,false,,receipt-aldi-balgowlah-2026-03-22
