@@ -23,3 +23,14 @@ date,store,product_name,product_id,category,unit,unit_size,price_aud,price_per_1
 2026-03-22,Woolworths,Frozen Salmon Fillets 400g,ww-frozen-salmon-400g,meat-seafood,g,400,7.00,1.750,true,10.00,https://www.woolworths.com.au/shop/specials/
 2026-03-22,Woolworths,Greek Yoghurt 500g,ww-greek-yoghurt-500g,dairy-eggs,g,500,4.00,0.800,false,,https://www.woolworths.com.au/shop/browse/dairy-eggs-fridge
 2026-03-22,Woolworths,Broccoli Whole,ww-broccoli-whole,fruit-veg,each,500,2.00,0.400,false,,https://www.woolworths.com.au/shop/browse/fruit-veg
+2026-03-22,Coles,Shepard Avocado Each,coles-shepard-avocado-each,fruit-veg,each,170,1.20,0.706,true,1.50,https://www.coles.com.au/on-special/fruit-vegetables
+2026-03-22,Coles,Lemon Each,coles-lemon-each,fruit-veg,each,130,1.80,1.385,true,2.50,https://www.coles.com.au/on-special/fruit-vegetables
+2026-03-22,Coles,Lebanese Cucumber approx 160g,coles-lebanese-cucumber-160g,fruit-veg,each,160,0.78,0.488,true,1.20,https://www.coles.com.au/on-special/fruit-vegetables
+2026-03-22,Coles,Baby Broccoli Bunch,coles-baby-broccoli-bunch,fruit-veg,each,250,2.30,0.920,true,3.50,https://www.coles.com.au/on-special/fruit-vegetables
+2026-03-22,Coles,Sweet Gold Potatoes approx 500g,coles-sweet-gold-potatoes-500g,fruit-veg,g,500,1.75,0.350,true,2.50,https://www.coles.com.au/on-special/fruit-vegetables
+2026-03-22,Coles,Sweet Corn Each,coles-sweet-corn-each,fruit-veg,each,200,1.00,0.500,true,2.00,https://www.coles.com.au/on-special/fruit-vegetables
+2026-03-22,Coles,RSPCA Chicken Breast Diced 500g,coles-rspca-chicken-diced-500g,meat-seafood,g,500,8.00,1.600,true,12.00,https://www.coles.com.au/on-special/meat-seafood
+2026-03-22,Coles,RSPCA Chicken Tenderloins 600g,coles-rspca-chicken-tenderloins-600g,meat-seafood,g,600,10.00,1.667,true,14.00,https://www.coles.com.au/on-special/meat-seafood
+2026-03-22,Coles,Mutti Polpa Tomatoes Finely Chopped 400g,coles-mutti-polpa-400g,pantry,g,400,1.60,0.400,true,2.50,https://www.coles.com.au/on-special/pantry
+2026-03-22,Coles,Bega Peanut Butter Smooth 470g,coles-bega-pb-smooth-470g,pantry,g,470,5.50,1.170,true,7.00,https://www.coles.com.au/on-special/pantry
+2026-03-22,Coles,John West Tuna Chunky Springwater 95g,coles-jw-tuna-spring-95g,pantry,g,95,2.90,3.053,true,3.50,https://www.coles.com.au/on-special/pantry

@@ -7,6 +7,12 @@ It combines nutrition science, grocery pricing, and optimization algorithms to a
 
 > *“What is the cheapest way to meet my daily nutritional needs?”*
 
+## Quick Start
+
+```
+claude --chrome --dangerously-skip-permissions /generate-recipes
+```
+
 ---
 
 ## 🚀 Features

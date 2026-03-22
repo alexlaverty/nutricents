@@ -50,36 +50,28 @@
     .logo {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 12px;
     }
 
     .logo-mark {
-      width: 36px;
-      height: 36px;
+      width: 44px; height: 44px;
       background: var(--accent);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      font-weight: 800;
-      color: #0f0f0f;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 20px; color: #0f0f0f;
     }
 
     .logo-name {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--white);
+      font-size: 28px; font-weight: 800; color: var(--white);
       letter-spacing: -0.5px;
     }
-
     .logo-name span { color: var(--accent); }
 
     .tagline {
       color: var(--text-muted);
       font-size: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     .date-badge {
@@ -89,244 +81,201 @@
       color: var(--accent);
       font-size: 13px;
       font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 100px;
+      padding: 6px 16px;
+      border-radius: 99px;
       margin-bottom: 28px;
-      letter-spacing: 0.3px;
     }
 
     .daily-stats {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 32px;
       flex-wrap: wrap;
-      margin-top: 8px;
     }
 
-    .stat {
-      text-align: center;
-    }
-
+    .stat { text-align: center; }
     .stat-value {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1;
+      font-size: 26px; font-weight: 800; color: var(--accent);
+      line-height: 1.1;
     }
+    .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-top: 4px; }
+    .stat-divider { width: 1px; height: 40px; background: var(--border); }
 
-    .stat-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    .stat-divider {
-      width: 1px;
-      background: var(--border);
-      height: 40px;
-      align-self: center;
-    }
-
-    /* ── Health badges summary ── */
+    /* ── Health Summary ── */
     .health-summary {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 8px;
+      justify-content: center;
       padding: 20px 24px;
       border-bottom: 1px solid var(--border);
       background: var(--accent-dim2);
     }
 
+    /* ── Badges ── */
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 4px 12px;
       font-size: 12px;
-      font-weight: 500;
-      color: var(--text);
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 99px;
       white-space: nowrap;
     }
-
-    .badge.green { border-color: rgba(78,204,163,0.4); color: var(--accent); background: var(--accent-dim); }
-    .badge.gold  { border-color: rgba(240,165,0,0.35); color: var(--warning); background: rgba(240,165,0,0.08); }
+    .badge.green { background: rgba(78,204,163,0.12); color: var(--accent); border: 1px solid rgba(78,204,163,0.25); }
+    .badge.orange { background: rgba(240,165,0,0.12); color: var(--warning); border: 1px solid rgba(240,165,0,0.25); }
+    .badge.special { background: rgba(240,165,0,0.15); color: var(--warning); border: 1px solid rgba(240,165,0,0.3); }
 
     /* ── Main ── */
-    main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px 80px;
-    }
+    main { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
 
     .section-title {
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       color: var(--text-dim);
-      font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
-    /* ── Meal card ── */
+    /* ── Meal Card ── */
     .meal-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      margin-bottom: 28px;
+      margin-bottom: 32px;
       overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
     }
 
     .meal-header {
-      padding: 24px 28px 20px;
-      border-bottom: 1px solid var(--border);
       display: flex;
-      align-items: flex-start;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px 28px 20px;
+      border-bottom: 1px solid var(--border);
     }
 
     .meal-rank {
       font-size: 11px;
-      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--text-dim);
-      margin-bottom: 4px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
     .meal-title {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
       color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 10px;
+      line-height: 1.25;
+      margin-bottom: 8px;
     }
 
     .meal-subtitle {
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      max-width: 560px;
     }
 
-    .meal-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .meal-cost-block {
-      text-align: right;
-      flex-shrink: 0;
-    }
-
-    .cost-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--text-muted);
-      margin-bottom: 2px;
-    }
-
-    .cost-value {
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1;
-    }
-
-    .cost-cents {
-      font-size: 18px;
-    }
+    .meal-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 
     .time-row {
       display: flex;
       gap: 16px;
-      margin-top: 8px;
-      font-size: 12px;
+      font-size: 13px;
       color: var(--text-muted);
+      font-weight: 500;
     }
 
-    .time-row span { display: flex; align-items: center; gap: 4px; }
+    .meal-cost-block { text-align: right; flex-shrink: 0; }
+    .cost-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 4px; }
+    .cost-value { font-size: 40px; font-weight: 800; color: var(--accent); line-height: 1; }
+    .cost-value .cost-cents { font-size: 26px; }
 
-    /* ── Meal body sections ── */
-    .meal-body {
-      padding: 0;
-    }
+    /* ── Meal Body ── */
+    .meal-body { }
 
     .meal-section {
       padding: 22px 28px;
       border-bottom: 1px solid var(--border);
     }
-
     .meal-section:last-child { border-bottom: none; }
 
     .section-heading {
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.9px;
       color: var(--text-muted);
+      font-weight: 700;
       margin-bottom: 14px;
     }
 
-    /* ── Ingredients table ── */
+    /* ── Ingredients Table ── */
     .ingredients-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .ingredients-table th {
       text-align: left;
+      color: var(--text-dim);
       font-size: 11px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.7px;
-      color: var(--text-dim);
+      letter-spacing: 0.6px;
       padding: 0 8px 10px 0;
       border-bottom: 1px solid var(--border);
     }
 
-    .ingredients-table th:last-child { text-align: right; }
-
     .ingredients-table td {
-      padding: 9px 8px 9px 0;
+      padding: 10px 8px 10px 0;
       border-bottom: 1px solid rgba(255,255,255,0.04);
-      color: var(--text);
       vertical-align: top;
     }
-
-    .ingredients-table td:last-child { text-align: right; color: var(--accent); font-weight: 600; }
     .ingredients-table tr:last-child td { border-bottom: none; }
 
-    .ing-name { font-weight: 500; }
-    .ing-store { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-    .special-tag { font-size: 10px; background: rgba(240,165,0,0.15); color: var(--warning); border-radius: 4px; padding: 1px 5px; margin-left: 6px; font-weight: 600; letter-spacing: 0.5px; }
+    .ing-name { color: var(--text); font-weight: 500; }
+    .ing-store { color: var(--text-muted); font-size: 11px; margin-top: 2px; }
+    .ing-note { color: var(--warning); font-size: 11px; font-weight: 600; margin-top: 2px; }
 
     .total-row {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      margin-top: 14px;
+      gap: 12px;
       padding-top: 14px;
+      margin-top: 6px;
       border-top: 1px solid var(--border);
     }
 
-    .total-label { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+    .total-label { font-size: 12px; color: var(--text-muted); font-weight: 600; }
     .total-amount { font-size: 20px; font-weight: 800; color: var(--accent); }
 
-    /* ── Macros ── */
+    /* ── Sodium Alert ── */
+    .sodium-alert {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(78,204,163,0.07);
+      border: 1px solid rgba(78,204,163,0.2);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      margin-top: 14px;
+      font-size: 13px;
+    }
+    .sodium-alert .na-icon { font-size: 16px; flex-shrink: 0; }
+    .sodium-alert .na-text { color: var(--text-muted); }
+    .sodium-alert .na-text strong { color: var(--accent); }
+
+    /* ── Macro Grid ── */
     .macro-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
@@ -334,133 +283,93 @@
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-      padding: 12px 14px;
+      padding: 14px 12px;
       text-align: center;
     }
 
     .macro-value {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 800;
       color: var(--white);
-      line-height: 1;
+      line-height: 1.1;
     }
+    .macro-unit { font-size: 13px; font-weight: 400; color: var(--text-muted); }
+    .macro-name { font-size: 11px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-    .macro-unit {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .macro-name {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--text-dim);
-      margin-top: 4px;
-      font-weight: 600;
-    }
-
-    /* ── Nutrient bars ── */
+    /* ── Nutrient Bars ── */
     .nutrient-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px 24px;
     }
 
-    @media (max-width: 600px) {
-      .nutrient-grid { grid-template-columns: 1fr; }
-    }
-
-    .nutrient-row {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+    .nutrient-row { }
 
     .nutrient-label-row {
       display: flex;
       justify-content: space-between;
-      font-size: 12px;
+      align-items: baseline;
+      margin-bottom: 5px;
     }
 
-    .nutrient-name { color: var(--text-muted); }
-    .nutrient-pct {
-      font-weight: 600;
-      color: var(--text);
-    }
-
+    .nutrient-name { font-size: 12px; color: var(--text-muted); }
+    .nutrient-pct { font-size: 12px; font-weight: 700; }
     .nutrient-pct.high { color: var(--accent); }
-    .nutrient-pct.over { color: var(--warning); }
+    .nutrient-pct.max { color: #f0a500; }
+    .nutrient-pct.low { color: var(--text-dim); }
 
     .bar-track {
-      height: 5px;
-      background: rgba(255,255,255,0.07);
-      border-radius: 100px;
+      height: 6px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 99px;
       overflow: hidden;
     }
 
     .bar-fill {
       height: 100%;
       background: var(--accent);
-      border-radius: 100px;
-      transition: width 0.5s ease;
+      border-radius: 99px;
+      max-width: 100%;
     }
 
-    .bar-fill.over { background: var(--warning); }
-    .bar-fill.very-high { background: linear-gradient(90deg, var(--accent), #a0ffd6); }
+    .bar-fill.max { background: var(--warning); }
 
-    /* ── GI badge ── */
+    /* ── GI ── */
     .gi-row {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 14px;
     }
-
     .gi-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 100px;
-      font-size: 13px;
+      flex-shrink: 0;
+      font-size: 12px;
       font-weight: 700;
-      border: 1px solid;
+      padding: 5px 12px;
+      border-radius: 99px;
     }
+    .gi-low { background: rgba(78,204,163,0.12); color: var(--accent); border: 1px solid rgba(78,204,163,0.25); }
+    .gi-medium { background: rgba(240,165,0,0.12); color: var(--warning); border: 1px solid rgba(240,165,0,0.25); }
+    .gi-note { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-    .gi-low { background: rgba(78,204,163,0.12); color: var(--accent); border-color: rgba(78,204,163,0.3); }
-    .gi-medium { background: rgba(240,165,0,0.1); color: var(--warning); border-color: rgba(240,165,0,0.3); }
-
-    .gi-note { font-size: 13px; color: var(--text-muted); flex: 1; }
-
-    /* ── Health benefits ── */
-    .health-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    /* ── Health Benefits ── */
+    .health-list { display: flex; flex-direction: column; gap: 12px; }
 
     .health-item {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: flex-start;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
     }
 
-    .health-icon {
-      font-size: 16px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .health-text { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .health-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .health-text { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
     .health-text strong { color: var(--text); }
 
-    /* ── Instructions ── */
-    .steps-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      counter-reset: step;
-    }
+    /* ── Steps ── */
+    .steps-list { display: flex; flex-direction: column; gap: 10px; }
 
     .step {
       display: flex;
@@ -469,39 +378,44 @@
     }
 
     .step-num {
-      width: 26px;
-      height: 26px;
-      min-width: 26px;
+      width: 26px; height: 26px; flex-shrink: 0;
       background: var(--accent-dim);
-      border: 1px solid rgba(78,204,163,0.3);
+      border: 1px solid rgba(78,204,163,0.25);
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: var(--accent);
     }
 
-    .step-text { font-size: 14px; color: var(--text); line-height: 1.6; padding-top: 2px; }
+    .step-text { font-size: 13px; color: var(--text); line-height: 1.65; padding-top: 3px; }
 
-    /* ── Shopping list ── */
-    .shopping-section {
+    .step-tip {
+      background: rgba(240,165,0,0.07);
+      border: 1px solid rgba(240,165,0,0.2);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    .step-tip strong { color: var(--warning); }
+
+    /* ── Shopping List ── */
+    .shopping-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      margin-top: 48px;
       overflow: hidden;
+      margin-top: 16px;
     }
 
     .shopping-header {
-      padding: 24px 28px;
-      border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 12px;
+      padding: 22px 28px;
+      border-bottom: 1px solid var(--border);
     }
 
     .shopping-title {
@@ -517,14 +431,13 @@
     }
 
     .store-group {
-      padding: 20px 28px;
+      padding: 18px 28px;
       border-bottom: 1px solid var(--border);
     }
-
     .store-group:last-child { border-bottom: none; }
 
     .store-name {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.8px;
@@ -539,12 +452,13 @@
       padding: 7px 0;
       border-bottom: 1px solid rgba(255,255,255,0.04);
       font-size: 13px;
+      gap: 8px;
     }
-
     .shop-item:last-child { border-bottom: none; }
-    .shop-item-name { color: var(--text); }
-    .shop-item-price { color: var(--accent); font-weight: 600; }
-    .shop-note { font-size: 11px; color: var(--text-muted); margin-left: 8px; }
+    .shop-item-name { color: var(--text); flex: 1; }
+    .shop-item-meta { color: var(--text-muted); font-size: 11px; }
+    .shop-item-price { color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .shop-special { color: var(--warning); font-size: 11px; font-weight: 600; margin-left: 6px; }
 
     .store-subtotal {
       display: flex;
@@ -556,8 +470,33 @@
       font-weight: 600;
       color: var(--text-muted);
     }
-
     .store-subtotal span { color: var(--accent); margin-left: 8px; }
+
+    /* ── Gaps Section ── */
+    .gaps-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-top: 32px;
+    }
+
+    .gaps-title {
+      font-size: 16px; font-weight: 800; color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .gap-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 13px;
+    }
+    .gap-item:last-child { border-bottom: none; }
+    .gap-label { color: var(--warning); font-weight: 700; min-width: 120px; flex-shrink: 0; }
+    .gap-note { color: var(--text-muted); }
 
     /* ── Footer ── */
     footer {
@@ -568,7 +507,6 @@
       color: var(--text-dim);
       line-height: 1.8;
     }
-
     footer a { color: var(--text-muted); text-decoration: none; }
     footer a:hover { color: var(--accent); }
 
@@ -580,6 +518,8 @@
       .meal-header { flex-direction: column; }
       .meal-cost-block { text-align: left; }
       .meal-section { padding: 18px 18px; }
+      .macro-grid { grid-template-columns: repeat(2, 1fr); }
+      .nutrient-grid { grid-template-columns: 1fr; }
       main { padding: 24px 14px 60px; }
     }
   </style>
@@ -596,18 +536,23 @@
   <div class="date-badge">Sunday 22 March 2026</div>
   <div class="daily-stats">
     <div class="stat">
-      <div class="stat-value">$6.19</div>
+      <div class="stat-value">$8.79</div>
       <div class="stat-label">Total Daily Cost</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat">
-      <div class="stat-value">1,610</div>
+      <div class="stat-value">1,844</div>
       <div class="stat-label">Estimated kcal</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat">
-      <div class="stat-value">91g</div>
+      <div class="stat-value">81g</div>
       <div class="stat-label">Total Protein</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-value">432mg</div>
+      <div class="stat-label">Daily Sodium (29% of limit)</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat">
@@ -625,33 +570,37 @@
   <div class="badge green">📉 Lower LDL Cholesterol</div>
   <div class="badge green">🌿 Low Sugar</div>
   <div class="badge green">📊 Low Glycaemic Index</div>
+  <div class="badge special">⭐ Avocado on special $1.20</div>
+  <div class="badge special">⭐ Broccoli on special $1.50</div>
+  <div class="badge special">⭐ Mutti Tomatoes on special $1.60</div>
 </div>
 
 <!-- ══════════════════════ MAIN ══════════════════════ -->
 <main>
-  <p class="section-title">Today's 3-Meal Plan — ordered cheapest to most expensive</p>
+  <p class="section-title">Today's 3-Meal Plan — ordered cheapest to most expensive · 100% Lactose-Free · Low Sodium</p>
 
-  <!-- ═══════════════════ MEAL 1 ═══════════════════ -->
+  <!-- ═══════════════════ MEAL 1 — BREAKFAST ═══════════════════ -->
   <article class="meal-card">
     <div class="meal-header">
       <div>
         <div class="meal-rank">Meal 1 · Breakfast</div>
-        <h2 class="meal-title">🥣 "The LDL Buster" Banana Oat Porridge with Yoghurt</h2>
-        <p class="meal-subtitle">Cholesterol-lowering oat beta-glucan meets gut-friendly probiotics and slow-burning fuel</p>
+        <h2 class="meal-title">🥣 "The LDL Buster" Banana Oat Porridge with Peanut Butter</h2>
+        <p class="meal-subtitle">Oat beta-glucan clinically proven to lower LDL · natural potassium from banana · healthy fats and magnesium from peanut butter</p>
         <div class="meal-badges">
           <span class="badge green">❤️ Heart Health</span>
           <span class="badge green">📉 LDL Cholesterol</span>
-          <span class="badge green">📊 Low GI</span>
+          <span class="badge green">📊 Low-Medium GI</span>
           <span class="badge green">🩸 Blood Pressure</span>
+          <span class="badge green">🥛 Lactose-Free</span>
         </div>
         <div class="time-row">
-          <span>⏱ Prep: 3 min</span>
+          <span>⏱ Prep: 2 min</span>
           <span>🔥 Cook: 5 min</span>
         </div>
       </div>
       <div class="meal-cost-block">
         <div class="cost-label">Meal Cost</div>
-        <div class="cost-value">$1<span class="cost-cents">.23</span></div>
+        <div class="cost-value">$0<span class="cost-cents">.80</span></div>
       </div>
     </div>
 
@@ -671,537 +620,51 @@
           </thead>
           <tbody>
             <tr>
-              <td><div class="ing-name">Rolled oats, uncooked</div><div class="ing-store">ALDI — $2.49/kg</div></td>
+              <td>
+                <div class="ing-name">Rolled oats, uncooked</div>
+                <div class="ing-store">ALDI — $2.49/kg · $0.249/100g</div>
+              </td>
               <td>80g</td>
               <td>ALDI</td>
               <td>$0.20</td>
             </tr>
             <tr>
-              <td><div class="ing-name">Banana, medium</div><div class="ing-store">ALDI — $2.49/kg</div></td>
-              <td>1 medium (120g)</td>
+              <td>
+                <div class="ing-name">Banana, Cavendish, 1 medium</div>
+                <div class="ing-store">ALDI — $2.49/kg</div>
+              </td>
+              <td>120g</td>
               <td>ALDI</td>
               <td>$0.30</td>
             </tr>
             <tr>
-              <td><div class="ing-name">Natural full-fat yoghurt</div><div class="ing-store">ALDI — $2.99/500g</div></td>
-              <td>100g</td>
-              <td>ALDI</td>
-              <td>$0.60</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Full-fat milk</div><div class="ing-store">ALDI — $2.59/2L</div></td>
-              <td>100mL</td>
-              <td>ALDI</td>
-              <td>$0.13</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="total-row">
-          <div class="total-label">Total Meal Cost</div>
-          <div class="total-amount">$1.23</div>
-        </div>
-      </div>
-
-      <!-- Macros -->
-      <div class="meal-section">
-        <div class="section-heading">Macronutrients (per meal)</div>
-        <div class="macro-grid">
-          <div class="macro-card">
-            <div class="macro-value">551</div>
-            <div class="macro-unit">kcal</div>
-            <div class="macro-name">Energy</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">19.9<span class="macro-unit">g</span></div>
-            <div class="macro-name">Protein</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">77.9<span class="macro-unit">g</span></div>
-            <div class="macro-name">Carbs</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">14.4<span class="macro-unit">g</span></div>
-            <div class="macro-name">Fat</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">10.3<span class="macro-unit">g</span></div>
-            <div class="macro-name">Fibre</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">27.2<span class="macro-unit">g</span></div>
-            <div class="macro-name">Sugar</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Nutrients -->
-      <div class="meal-section">
-        <div class="section-heading">Key Micronutrients — % of Daily RDI (adult male)</div>
-        <div class="nutrient-grid">
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Calcium</span>
-              <span class="nutrient-pct high">32%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:32%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Magnesium</span>
-              <span class="nutrient-pct high">35%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Potassium</span>
-              <span class="nutrient-pct high">27%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:27%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Iron</span>
-              <span class="nutrient-pct high">39%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:39%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Zinc</span>
-              <span class="nutrient-pct high">21%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:21%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin B12</span>
-              <span class="nutrient-pct high">38%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:38%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Folate (B9)</span>
-              <span class="nutrient-pct high">22%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:22%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Thiamin (B1)</span>
-              <span class="nutrient-pct high">26%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:26%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Phosphorus</span>
-              <span class="nutrient-pct high">45%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Dietary Fibre</span>
-              <span class="nutrient-pct high">34%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:34%"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- GI -->
-      <div class="meal-section">
-        <div class="section-heading">Glycaemic Index</div>
-        <div class="gi-row">
-          <div class="gi-badge gi-low">📊 Low GI</div>
-          <p class="gi-note">Oats (GI ~55), yoghurt (&lt;20), banana (~51). The beta-glucan soluble fibre in oats slows glucose absorption significantly. Adding yoghurt further blunts the glycaemic response.</p>
-        </div>
-      </div>
-
-      <!-- Health benefits -->
-      <div class="meal-section">
-        <div class="section-heading">Health Benefits Addressed</div>
-        <div class="health-list">
-          <div class="health-item">
-            <div class="health-icon">📉</div>
-            <div class="health-text"><strong>Lower LDL Cholesterol:</strong> The 9.5g of beta-glucan soluble fibre in 80g oats is clinically proven to reduce LDL cholesterol by binding bile acids in the gut. Just 3g/day is the EU-approved therapeutic dose — this breakfast provides 3× that.</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">❤️</div>
-            <div class="health-text"><strong>Cardiovascular Health:</strong> Potassium (1,038mg across all sources) supports healthy blood pressure. Magnesium (145mg, 35% RDI) is critical for cardiac muscle function and vasodilation.</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">🩸</div>
-            <div class="health-text"><strong>Blood Pressure:</strong> High potassium : sodium ratio (1038mg K vs ~110mg Na) is strongly associated with lower blood pressure. Oats have near-zero sodium (2mg/100g).</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">🦠</div>
-            <div class="health-text"><strong>Gut Health:</strong> Natural yoghurt with live cultures provides probiotics (Lactobacillus, Bifidobacterium). Oat beta-glucan acts as a prebiotic, feeding beneficial gut bacteria.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Instructions -->
-      <div class="meal-section">
-        <div class="section-heading">Cooking Instructions</div>
-        <div class="steps-list">
-          <div class="step"><div class="step-num">1</div><div class="step-text">Add 80g rolled oats and 100mL milk to a small saucepan. Add 150mL water. Stir to combine.</div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-text">Heat over medium heat, stirring occasionally, for 4–5 minutes until thickened to your preferred consistency. Season with a pinch of cinnamon if desired.</div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-text">Pour into a bowl. Slice the banana over the top.</div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-text">Spoon yoghurt alongside or on top. Serve immediately.</div></div>
-        </div>
-      </div>
-
-    </div>
-  </article>
-
-  <!-- ═══════════════════ MEAL 2 ═══════════════════ -->
-  <article class="meal-card">
-    <div class="meal-header">
-      <div>
-        <div class="meal-rank">Meal 2 · Lunch</div>
-        <h2 class="meal-title">🍲 "The Iron Forge" Red Lentil & Vegetable Dal</h2>
-        <p class="meal-subtitle">Plant-based iron powerhouse with anti-cancer lycopene, allicin, and extraordinary fibre</p>
-        <div class="meal-badges">
-          <span class="badge green">🛡️ Anti-Cancer</span>
-          <span class="badge green">💪 High Iron</span>
-          <span class="badge green">📊 Low GI</span>
-          <span class="badge green">❤️ Heart Health</span>
-          <span class="badge green">📉 LDL Cholesterol</span>
-        </div>
-        <div class="time-row">
-          <span>⏱ Prep: 5 min</span>
-          <span>🔥 Cook: 20 min</span>
-        </div>
-      </div>
-      <div class="meal-cost-block">
-        <div class="cost-label">Meal Cost</div>
-        <div class="cost-value">$1<span class="cost-cents">.56</span></div>
-      </div>
-    </div>
-
-    <div class="meal-body">
-
-      <!-- Ingredients -->
-      <div class="meal-section">
-        <div class="section-heading">Ingredients</div>
-        <table class="ingredients-table">
-          <thead>
-            <tr>
-              <th>Ingredient</th>
-              <th>Quantity</th>
-              <th>Store</th>
-              <th>Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><div class="ing-name">Red lentils, dry</div><div class="ing-store">ALDI — $1.99/500g</div></td>
-              <td>100g</td>
-              <td>ALDI</td>
-              <td>$0.40</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Carrot, mature</div><div class="ing-store">ALDI — $1.29/kg</div></td>
-              <td>150g (~2 medium)</td>
-              <td>ALDI</td>
-              <td>$0.19</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Diced tomatoes, canned</div><div class="ing-store">ALDI — $0.89/400g</div></td>
-              <td>200g (half can)</td>
-              <td>ALDI</td>
-              <td>$0.45</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Brown onion</div><div class="ing-store">ALDI — $1.29/kg</div></td>
-              <td>100g (1 small)</td>
-              <td>ALDI</td>
-              <td>$0.13</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Frozen peas</div><div class="ing-store">ALDI — $1.89/kg</div></td>
-              <td>100g</td>
-              <td>ALDI</td>
-              <td>$0.19</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Garlic, fresh</div><div class="ing-store">Coles — $1.50/3 bulbs</div></td>
-              <td>2 cloves (~10g)</td>
+              <td>
+                <div class="ing-name">Bega Peanut Butter Smooth</div>
+                <div class="ing-store">Coles — $5.50/470g (ON SPECIAL, was $7.00)</div>
+                <div class="ing-note">⭐ On special today</div>
+              </td>
+              <td>1½ tbsp (24g)</td>
               <td>Coles</td>
-              <td>$0.10</td>
+              <td>$0.28</td>
             </tr>
             <tr>
-              <td><div class="ing-name">Olive oil, extra virgin</div><div class="ing-store">ALDI — $4.49/500mL</div></td>
-              <td>5mL (1 tsp)</td>
-              <td>ALDI</td>
-              <td>$0.05</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Ground cumin + turmeric</div><div class="ing-store">Pantry staples</div></td>
-              <td>1 tsp each</td>
-              <td>—</td>
-              <td>$0.05</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="total-row">
-          <div class="total-label">Total Meal Cost</div>
-          <div class="total-amount">$1.56</div>
-        </div>
-      </div>
-
-      <!-- Macros -->
-      <div class="meal-section">
-        <div class="section-heading">Macronutrients (per meal)</div>
-        <div class="macro-grid">
-          <div class="macro-card">
-            <div class="macro-value">497</div>
-            <div class="macro-unit">kcal</div>
-            <div class="macro-name">Energy</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">32.8<span class="macro-unit">g</span></div>
-            <div class="macro-name">Protein</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">74.8<span class="macro-unit">g</span></div>
-            <div class="macro-name">Carbs</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">9.5<span class="macro-unit">g</span></div>
-            <div class="macro-name">Fat</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">30.6<span class="macro-unit">g</span></div>
-            <div class="macro-name">Fibre</div>
-          </div>
-          <div class="macro-card">
-            <div class="macro-value">7.4<span class="macro-unit">g</span></div>
-            <div class="macro-name">Sugar</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Nutrients -->
-      <div class="meal-section">
-        <div class="section-heading">Key Micronutrients — % of Daily RDI (adult male)</div>
-        <div class="nutrient-grid">
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Iron</span>
-              <span class="nutrient-pct over">163%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill very-high" style="width:100%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin A</span>
-              <span class="nutrient-pct over">273%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill very-high" style="width:100%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Folate (B9)</span>
-              <span class="nutrient-pct high">67%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:67%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Potassium</span>
-              <span class="nutrient-pct high">49%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:49%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Magnesium</span>
-              <span class="nutrient-pct high">41%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:41%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Zinc</span>
-              <span class="nutrient-pct high">30%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin E</span>
-              <span class="nutrient-pct high">47%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:47%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Dietary Fibre</span>
-              <span class="nutrient-pct over">102%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill very-high" style="width:100%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Copper</span>
-              <span class="nutrient-pct high">38%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:38%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin C</span>
-              <span class="nutrient-pct high">33%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:33%"></div></div>
-          </div>
-        </div>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:12px;">⚠️ Iron from lentils is non-haem iron (plant-based). The vitamin C from tomatoes, peas and onion in this meal enhances absorption by 2–4×. Bioavailable iron is estimated at ~25–35% of stated value.</p>
-      </div>
-
-      <!-- GI -->
-      <div class="meal-section">
-        <div class="section-heading">Glycaemic Index</div>
-        <div class="gi-row">
-          <div class="gi-badge gi-low">📊 Low GI</div>
-          <p class="gi-note">Red lentils have a GI of ~21–26 — one of the lowest of any food. Combined with high fibre (30.6g) and protein (32.8g), this meal produces an exceptionally blunted blood glucose response.</p>
-        </div>
-      </div>
-
-      <!-- Health benefits -->
-      <div class="meal-section">
-        <div class="section-heading">Health Benefits Addressed</div>
-        <div class="health-list">
-          <div class="health-item">
-            <div class="health-icon">🛡️</div>
-            <div class="health-text"><strong>Anti-Cancer:</strong> Lycopene from cooked tomatoes (bioavailability increases 3–4× when heated with fat) is associated with reduced prostate and breast cancer risk. Allicin from garlic and quercetin from onion have demonstrated anti-tumour properties in multiple studies.</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">📉</div>
-            <div class="health-text"><strong>Lower LDL Cholesterol:</strong> Soluble fibre from lentils (13.7g/100g dry) and peas lowers LDL by binding bile acids. Lentils also contain plant sterols that compete with dietary cholesterol for absorption.</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">❤️</div>
-            <div class="health-text"><strong>Cardiovascular Health:</strong> 1,858mg of potassium — 49% of daily RDI in one meal — is strongly associated with reduced stroke and heart disease risk. Folate (266µg, 67% RDI) helps reduce homocysteine levels, a cardiovascular risk marker.</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">🧬</div>
-            <div class="health-text"><strong>Beta-Carotene Powerhouse:</strong> 150g of carrot provides 11,733µg beta-carotene, converted to vitamin A as needed. Cooked with olive oil, bioavailability increases significantly. Vitamin A supports immune function, skin health, and eye health.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Instructions -->
-      <div class="meal-section">
-        <div class="section-heading">Cooking Instructions</div>
-        <div class="steps-list">
-          <div class="step"><div class="step-num">1</div><div class="step-text">Rinse 100g red lentils under cold water until the water runs clear. Set aside.</div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-text">Heat olive oil in a medium saucepan over medium heat. Add diced onion and cook 3 minutes until softened. Add crushed garlic, cumin, and turmeric; stir for 30 seconds.</div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-text">Add lentils, diced carrot, canned tomatoes, and 400mL water. Stir well. Bring to a boil, then reduce heat and simmer 15–18 minutes, stirring occasionally, until lentils are soft.</div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-text">Add frozen peas in the final 3 minutes of cooking. Season with a pinch of salt and black pepper. Serve hot.</div></div>
-        </div>
-      </div>
-
-    </div>
-  </article>
-
-  <!-- ═══════════════════ MEAL 3 ═══════════════════ -->
-  <article class="meal-card">
-    <div class="meal-header">
-      <div>
-        <div class="meal-rank">Meal 3 · Dinner</div>
-        <h2 class="meal-title">🐟 "The Omega Powerhouse" Garlic Salmon, Broccoli & Brown Rice Bowl</h2>
-        <p class="meal-subtitle">Extraordinary omega-3s and vitamin D from salmon, sulforaphane from broccoli, complete amino acids — all in one budget bowl</p>
-        <div class="meal-badges">
-          <span class="badge green">❤️ Cardiovascular</span>
-          <span class="badge green">🛡️ Anti-Cancer</span>
-          <span class="badge green">☀️ Vitamin D</span>
-          <span class="badge green">🐟 Omega-3s</span>
-          <span class="badge green">📊 Low GI</span>
-        </div>
-        <div class="time-row">
-          <span>⏱ Prep: 5 min</span>
-          <span>🔥 Cook: 25 min</span>
-        </div>
-      </div>
-      <div class="meal-cost-block">
-        <div class="cost-label">Meal Cost</div>
-        <div class="cost-value">$3<span class="cost-cents">.40</span></div>
-      </div>
-    </div>
-
-    <div class="meal-body">
-
-      <!-- Ingredients -->
-      <div class="meal-section">
-        <div class="section-heading">Ingredients</div>
-        <table class="ingredients-table">
-          <thead>
-            <tr>
-              <th>Ingredient</th>
-              <th>Quantity</th>
-              <th>Store</th>
-              <th>Cost</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><div class="ing-name">Pink salmon, canned in brine, drained <span class="special-tag">SPECIAL</span></div><div class="ing-store">Coles — $2.20/95g can (check for specials)</div></td>
-              <td>95g (1 can)</td>
-              <td>Coles</td>
-              <td>$2.20</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Broccoli, whole head <span class="special-tag">SPECIAL</span></div><div class="ing-store">Coles — $1.50/head (~500g) on special</div></td>
-              <td>200g</td>
-              <td>Coles</td>
-              <td>$0.60</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Brown rice, dry</div><div class="ing-store">ALDI — $2.29/kg</div></td>
-              <td>80g dry (≈220g cooked)</td>
-              <td>ALDI</td>
-              <td>$0.18</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Frozen peas</div><div class="ing-store">ALDI — $1.89/kg</div></td>
-              <td>80g</td>
-              <td>ALDI</td>
-              <td>$0.15</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Carrot, mature</div><div class="ing-store">ALDI — $1.29/kg</div></td>
-              <td>100g</td>
-              <td>ALDI</td>
-              <td>$0.13</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Garlic, fresh</div><div class="ing-store">Coles — $1.50/3 bulbs</div></td>
-              <td>1 clove (~5g)</td>
-              <td>Coles</td>
-              <td>$0.05</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Olive oil, extra virgin</div><div class="ing-store">ALDI — $4.49/500mL</div></td>
-              <td>8mL</td>
-              <td>ALDI</td>
-              <td>$0.07</td>
-            </tr>
-            <tr>
-              <td><div class="ing-name">Low-sodium soy sauce</div><div class="ing-store">Pantry</div></td>
-              <td>10mL</td>
-              <td>—</td>
+              <td>
+                <div class="ing-name">Ground cinnamon</div>
+                <div class="ing-store">Pantry staple</div>
+              </td>
+              <td>½ tsp (1g)</td>
+              <td>Pantry</td>
               <td>$0.02</td>
             </tr>
           </tbody>
         </table>
         <div class="total-row">
           <div class="total-label">Total Meal Cost</div>
-          <div class="total-amount">$3.40</div>
+          <div class="total-amount">$0.80</div>
+        </div>
+        <div class="sodium-alert">
+          <div class="na-icon">🧂</div>
+          <div class="na-text">Sodium: <strong>~25mg</strong> (2% of 1,500mg daily target) — naturally very low</div>
         </div>
       </div>
 
@@ -1210,153 +673,134 @@
         <div class="section-heading">Macronutrients (per meal)</div>
         <div class="macro-grid">
           <div class="macro-card">
-            <div class="macro-value">562</div>
+            <div class="macro-value">538</div>
             <div class="macro-unit">kcal</div>
             <div class="macro-name">Energy</div>
           </div>
           <div class="macro-card">
-            <div class="macro-value">38.6<span class="macro-unit">g</span></div>
+            <div class="macro-value">17<span class="macro-unit">g</span></div>
             <div class="macro-name">Protein</div>
           </div>
           <div class="macro-card">
-            <div class="macro-value">69.4<span class="macro-unit">g</span></div>
+            <div class="macro-value">81<span class="macro-unit">g</span></div>
             <div class="macro-name">Carbs</div>
           </div>
           <div class="macro-card">
-            <div class="macro-value">17.4<span class="macro-unit">g</span></div>
+            <div class="macro-value">17<span class="macro-unit">g</span></div>
             <div class="macro-name">Fat</div>
           </div>
           <div class="macro-card">
-            <div class="macro-value">17.9<span class="macro-unit">g</span></div>
+            <div class="macro-value">10<span class="macro-unit">g</span></div>
             <div class="macro-name">Fibre</div>
           </div>
           <div class="macro-card">
-            <div class="macro-value">4.2<span class="macro-unit">g</span></div>
-            <div class="macro-name">Sugar</div>
+            <div class="macro-value">14<span class="macro-unit">g</span></div>
+            <div class="macro-name">Sugar (natural)</div>
           </div>
         </div>
       </div>
 
       <!-- Nutrients -->
       <div class="meal-section">
-        <div class="section-heading">Key Micronutrients — % of Daily RDI (adult male)</div>
+        <div class="section-heading">Key Micronutrients — % of Daily RDI (Australian NRV, adult male)</div>
         <div class="nutrient-grid">
           <div class="nutrient-row">
             <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin D</span>
-              <span class="nutrient-pct over">392%</span>
+              <span class="nutrient-name">Thiamine (B1)</span>
+              <span class="nutrient-pct high">58%</span>
             </div>
-            <div class="bar-track"><div class="bar-fill very-high" style="width:100%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Omega-3 LC</span>
-              <span class="nutrient-pct over">258%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill very-high" style="width:100%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin C</span>
-              <span class="nutrient-pct over">263%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill very-high" style="width:100%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Folate (B9)</span>
-              <span class="nutrient-pct high">88%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin B12</span>
-              <span class="nutrient-pct high">52%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:52%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin B3 (Niacin)</span>
-              <span class="nutrient-pct high">57%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:57%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Selenium</span>
-              <span class="nutrient-pct high">64%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:64%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Calcium</span>
-              <span class="nutrient-pct high">31%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:31%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Iodine</span>
-              <span class="nutrient-pct high">45%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
-          </div>
-          <div class="nutrient-row">
-            <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin E</span>
-              <span class="nutrient-pct high">86%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:86%"></div></div>
+            <div class="bar-track"><div class="bar-fill" style="width:58%"></div></div>
           </div>
           <div class="nutrient-row">
             <div class="nutrient-label-row">
               <span class="nutrient-name">Magnesium</span>
-              <span class="nutrient-pct high">47%</span>
+              <span class="nutrient-pct high">34%</span>
             </div>
-            <div class="bar-track"><div class="bar-fill" style="width:47%"></div></div>
+            <div class="bar-track"><div class="bar-fill" style="width:34%"></div></div>
           </div>
           <div class="nutrient-row">
             <div class="nutrient-label-row">
-              <span class="nutrient-name">Vitamin A</span>
-              <span class="nutrient-pct over">182%</span>
+              <span class="nutrient-name">Iron</span>
+              <span class="nutrient-pct high">38%</span>
             </div>
-            <div class="bar-track"><div class="bar-fill very-high" style="width:100%"></div></div>
+            <div class="bar-track"><div class="bar-fill" style="width:38%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Manganese</span>
+              <span class="nutrient-pct high">33%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:33%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin B6</span>
+              <span class="nutrient-pct high">35%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Phosphorus</span>
+              <span class="nutrient-pct high">33%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:33%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Zinc</span>
+              <span class="nutrient-pct high">24%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:24%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Potassium</span>
+              <span class="nutrient-pct high">11%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:11%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Niacin (B3)</span>
+              <span class="nutrient-pct high">18%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:18%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Dietary Fibre</span>
+              <span class="nutrient-pct high">33%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:33%"></div></div>
           </div>
         </div>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:12px;">✅ Canned salmon with soft bones provides 191mg calcium per 100g — comparable to dairy. The vitamin D in this meal exceeds the weekly requirement of many adults in a single serving.</p>
       </div>
 
       <!-- GI -->
       <div class="meal-section">
         <div class="section-heading">Glycaemic Index</div>
         <div class="gi-row">
-          <div class="gi-badge gi-medium">📊 Low–Medium GI</div>
-          <p class="gi-note">Brown rice GI ~55 (vs ~72 for white rice). Broccoli and peas have GI &lt;20. The combination of protein (38.6g), fat (17.4g), and fibre (17.9g) significantly slows glucose absorption, making the actual glycaemic response lower than brown rice alone.</p>
+          <div class="gi-badge gi-low">📊 Low-Medium GI (~45)</div>
+          <p class="gi-note">Oats have a GI of ~55, but the 6.4g of beta-glucan soluble fibre significantly slows glucose absorption. Adding peanut butter (protein + fat) further blunts the glycaemic response, lowering the combined meal GI to approximately 45. Banana adds ~14g of natural fructose — not a concern at this quantity.</p>
         </div>
       </div>
 
-      <!-- Health benefits -->
+      <!-- Health Benefits -->
       <div class="meal-section">
         <div class="section-heading">Health Benefits Addressed</div>
         <div class="health-list">
           <div class="health-item">
+            <div class="health-icon">📉</div>
+            <div class="health-text"><strong>Lower LDL Cholesterol:</strong> Oats provide ~6.4g of beta-glucan soluble fibre — almost double the 3.4g daily dose shown in clinical trials to lower LDL cholesterol by 5–10%. Beta-glucan forms a viscous gel in the gut, binding bile acids and forcing the liver to draw cholesterol from blood to produce more, directly reducing LDL.</div>
+          </div>
+          <div class="health-item">
             <div class="health-icon">❤️</div>
-            <div class="health-text"><strong>Cardiovascular Health:</strong> 1,576mg of long-chain omega-3 fatty acids (EPA+DHA) — 258% of RDI — reduces triglycerides, prevents arrhythmias, and reduces inflammation. This alone meets the heart-health omega-3 target for the entire week if consumed daily.</div>
+            <div class="health-text"><strong>Cardiovascular Health:</strong> Potassium from banana (422mg) supports arterial elasticity. Magnesium from oats and peanut butter (108mg, 34% RDI) is critical for cardiac muscle function and vasodilation. Healthy monounsaturated fats from peanut butter support favourable HDL levels.</div>
           </div>
           <div class="health-item">
-            <div class="health-icon">🛡️</div>
-            <div class="health-text"><strong>Anti-Cancer:</strong> Broccoli contains sulforaphane — one of the most potent anti-cancer compounds known. It activates Nrf2 pathways, upregulating detoxification enzymes. 200g provides a clinically relevant dose. Garlic adds allicin (antibacterial, anti-tumour). Selenium (64% RDI) is a critical antioxidant co-factor.</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">☀️</div>
-            <div class="health-text"><strong>Vitamin D — a rare budget win:</strong> Most Australians are deficient despite sun exposure. At 19.6µg per serving (392% of RDI), this single meal restores vitamin D stores. Vitamin D is critical for immune function, bone density, and mood regulation. No other budget food source comes close — canned salmon is exceptional.</div>
-          </div>
-          <div class="health-item">
-            <div class="health-icon">🦴</div>
-            <div class="health-text"><strong>Bone Health:</strong> Calcium from soft salmon bones (181mg) + broccoli (72mg) + peas = 309mg (31% RDI). Combined with 392% of RDI for vitamin D (which is required for calcium absorption), this meal delivers exceptional bone-building benefit.</div>
+            <div class="health-icon">🩸</div>
+            <div class="health-text"><strong>Low Blood Pressure:</strong> Potassium:Sodium ratio of 17:1 (422mg K vs 25mg Na) is exceptionally high. Adequate dietary potassium is consistently associated with lower blood pressure by counterbalancing sodium's effects on the kidneys.</div>
           </div>
         </div>
       </div>
@@ -1365,56 +809,858 @@
       <div class="meal-section">
         <div class="section-heading">Cooking Instructions</div>
         <div class="steps-list">
-          <div class="step"><div class="step-num">1</div><div class="step-text">Rinse 80g brown rice. Cook in a small pot with 200mL water: bring to boil, cover, reduce to lowest heat for 25 minutes. Remove from heat, rest covered for 5 minutes.</div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-text">While rice cooks, cut broccoli into florets and carrot into batons. Steam or boil for 6–7 minutes until just tender but still vibrant. Add frozen peas in the last 2 minutes.</div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-text">Drain canned salmon. Open, tip into a small bowl, and flake with a fork. Don't discard the soft bones — mash them in for maximum calcium. Drizzle with soy sauce.</div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-text">Heat olive oil in a small pan over medium heat. Add minced garlic and stir for 30 seconds until fragrant (do not brown).</div></div>
-          <div class="step"><div class="step-num">5</div><div class="step-text">Assemble: rice in bowl, top with steamed vegetables, then salmon. Drizzle garlic oil over the top. Serve immediately.</div></div>
+          <div class="step"><div class="step-num">1</div><div class="step-text">Add 80g rolled oats and 280mL cold water to a small saucepan. Stir briefly.</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-text">Heat over medium heat, stirring frequently, for 4–5 minutes until thick and creamy. The oats should have absorbed most of the water.</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-text">Pour into a bowl. Peel and slice the banana over the top.</div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-text">Dollop 1½ tablespoons of peanut butter in the centre. Dust with ground cinnamon.</div></div>
+          <div class="step"><div class="step-num">5</div><div class="step-text">Serve immediately while hot.</div></div>
         </div>
+        <div class="step-tip"><strong>💡 Tip:</strong> For a creamier texture, stir 30–40mL of unsweetened soy milk or oat milk through at step 2. It adds negligible cost and boosts the creaminess without any lactose.</div>
       </div>
 
     </div>
   </article>
 
+  <!-- ═══════════════════ MEAL 2 — LUNCH ═══════════════════ -->
+  <article class="meal-card">
+    <div class="meal-header">
+      <div>
+        <div class="meal-rank">Meal 2 · Lunch</div>
+        <h2 class="meal-title">🫙 "The Folate Powerhouse" Red Lentil Dal with Avocado</h2>
+        <p class="meal-subtitle">Extraordinary folate from lentils and avocado · lycopene from no-added-salt Mutti tomatoes · massive potassium from today's on-special avocado</p>
+        <div class="meal-badges">
+          <span class="badge green">🛡️ Anti-Cancer</span>
+          <span class="badge green">❤️ Heart Health</span>
+          <span class="badge green">📉 LDL Cholesterol</span>
+          <span class="badge green">🩸 Blood Pressure</span>
+          <span class="badge green">📊 Very Low GI</span>
+          <span class="badge green">🥛 Lactose-Free</span>
+          <span class="badge special">⭐ Avocado $1.20 special</span>
+        </div>
+        <div class="time-row">
+          <span>⏱ Prep: 5 min</span>
+          <span>🔥 Cook: 22 min</span>
+        </div>
+      </div>
+      <div class="meal-cost-block">
+        <div class="cost-label">Meal Cost</div>
+        <div class="cost-value">$3<span class="cost-cents">.72</span></div>
+      </div>
+    </div>
+
+    <div class="meal-body">
+
+      <!-- Ingredients -->
+      <div class="meal-section">
+        <div class="section-heading">Ingredients</div>
+        <table class="ingredients-table">
+          <thead>
+            <tr>
+              <th>Ingredient</th>
+              <th>Quantity</th>
+              <th>Store</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="ing-name">Red lentils, dried</div>
+                <div class="ing-store">ALDI — $1.99/500g · $0.398/100g</div>
+              </td>
+              <td>80g</td>
+              <td>ALDI</td>
+              <td>$0.32</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Carrots, medium</div>
+                <div class="ing-store">ALDI — $1.29/kg · $0.129/100g</div>
+              </td>
+              <td>2 medium (160g)</td>
+              <td>ALDI</td>
+              <td>$0.21</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Brown onion, diced</div>
+                <div class="ing-store">ALDI — $1.29/kg · $0.129/100g</div>
+              </td>
+              <td>½ medium (80g)</td>
+              <td>ALDI</td>
+              <td>$0.10</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Garlic, fresh, minced</div>
+                <div class="ing-store">Coles — $1.50/3 bulb pack · $1.00/100g</div>
+              </td>
+              <td>2 cloves (10g)</td>
+              <td>Coles</td>
+              <td>$0.10</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Mutti Polpa Tomatoes Finely Chopped (no added salt)</div>
+                <div class="ing-store">Coles — $1.60/400g (ON SPECIAL, was $2.50)</div>
+                <div class="ing-note">⭐ On special today — no added salt</div>
+              </td>
+              <td>200g (½ can)</td>
+              <td>Coles</td>
+              <td>$0.80</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Coles Shepard Avocado, whole</div>
+                <div class="ing-store">Coles — $1.20 each (ON SPECIAL, was $1.50)</div>
+                <div class="ing-note">⭐ On special today — excellent potassium &amp; MUFA source</div>
+              </td>
+              <td>1 whole (170g)</td>
+              <td>Coles</td>
+              <td>$1.20</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Lemon, fresh juice</div>
+                <div class="ing-store">Coles — $1.80 each (on special) · ½ lemon used for lunch</div>
+                <div class="ing-note">⭐ On special today — replaces salt as flavour</div>
+              </td>
+              <td>½ lemon (~30mL juice)</td>
+              <td>Coles</td>
+              <td>$0.90</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Olive oil extra virgin</div>
+                <div class="ing-store">ALDI — $4.49/500mL</div>
+              </td>
+              <td>1 tsp (4g)</td>
+              <td>ALDI</td>
+              <td>$0.04</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Spices: ground cumin ½ tsp, ground turmeric ¼ tsp, black pepper ¼ tsp</div>
+                <div class="ing-store">Pantry staples (no added salt)</div>
+              </td>
+              <td>~3g combined</td>
+              <td>Pantry</td>
+              <td>$0.05</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="total-row">
+          <div class="total-label">Total Meal Cost</div>
+          <div class="total-amount">$3.72</div>
+        </div>
+        <div class="sodium-alert">
+          <div class="na-icon">🧂</div>
+          <div class="na-text">Sodium: <strong>~139mg</strong> (9% of 1,500mg daily target) — Mutti polpa is no-added-salt; avocado &amp; lentils are naturally low sodium</div>
+        </div>
+      </div>
+
+      <!-- Macros -->
+      <div class="meal-section">
+        <div class="section-heading">Macronutrients (per meal)</div>
+        <div class="macro-grid">
+          <div class="macro-card">
+            <div class="macro-value">700</div>
+            <div class="macro-unit">kcal</div>
+            <div class="macro-name">Energy</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">27<span class="macro-unit">g</span></div>
+            <div class="macro-name">Protein</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">79<span class="macro-unit">g</span></div>
+            <div class="macro-name">Carbs</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">28<span class="macro-unit">g</span></div>
+            <div class="macro-name">Fat (87% MUFA)</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">24<span class="macro-unit">g</span></div>
+            <div class="macro-name">Fibre</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">8<span class="macro-unit">g</span></div>
+            <div class="macro-name">Sugar (natural)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nutrients -->
+      <div class="meal-section">
+        <div class="section-heading">Key Micronutrients — % of Daily RDI (Australian NRV, adult male)</div>
+        <div class="nutrient-grid">
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin A (beta-carotene)</span>
+              <span class="nutrient-pct max">260% ⭐⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Folate (B9)</span>
+              <span class="nutrient-pct max">85% ⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin C</span>
+              <span class="nutrient-pct max">&gt;100% ⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin K</span>
+              <span class="nutrient-pct high">53%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:53%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Potassium</span>
+              <span class="nutrient-pct max">50% ⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Iron</span>
+              <span class="nutrient-pct high">50%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin E</span>
+              <span class="nutrient-pct high">28%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:28%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Pantothenic Acid (B5)</span>
+              <span class="nutrient-pct high">44%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:44%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Thiamine (B1)</span>
+              <span class="nutrient-pct high">36%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:36%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Dietary Fibre</span>
+              <span class="nutrient-pct max">80% ⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:80%"></div></div>
+          </div>
+        </div>
+        <p style="font-size:12px; color:var(--text-dim); margin-top:12px;">🍅 Lycopene (from Mutti polpa): ~12mg — bioactive anti-cancer compound. 🥑 Avocado provides plant sterols that actively block intestinal cholesterol absorption.</p>
+      </div>
+
+      <!-- GI -->
+      <div class="meal-section">
+        <div class="section-heading">Glycaemic Index</div>
+        <div class="gi-row">
+          <div class="gi-badge gi-low">📊 Very Low GI (~28)</div>
+          <p class="gi-note">Red lentils have one of the lowest GIs of any food (GI ~29). Their high fibre and protein content dramatically slow glucose release. Avocado adds virtually no carbohydrates (3.1g net carbs) while its fat content further slows gastric emptying. This meal provides sustained energy over 4–6 hours.</p>
+        </div>
+      </div>
+
+      <!-- Health Benefits -->
+      <div class="meal-section">
+        <div class="section-heading">Health Benefits Addressed</div>
+        <div class="health-list">
+          <div class="health-item">
+            <div class="health-icon">🛡️</div>
+            <div class="health-text"><strong>Anti-Cancer:</strong> Lycopene from Mutti polpa tomatoes (~12mg) is a potent antioxidant associated with reduced prostate and colorectal cancer risk. Allicin from garlic (alliin converts on crushing) inhibits tumour cell growth. Beta-carotene (2082mcg, 260% RDI) from carrots is a powerful free radical scavenger. Turmeric provides curcumin, which has anti-inflammatory and anti-tumour properties.</div>
+          </div>
+          <div class="health-item">
+            <div class="health-icon">🩸</div>
+            <div class="health-text"><strong>Blood Pressure:</strong> Potassium from this single meal totals ~1,917mg — 50% of the daily AI — primarily from avocado (975mg) and lentils (586mg). High dietary potassium is strongly associated with lower systolic blood pressure. Sodium is only 139mg — a K:Na ratio of 14:1.</div>
+          </div>
+          <div class="health-item">
+            <div class="health-icon">📉</div>
+            <div class="health-text"><strong>Lower LDL Cholesterol:</strong> Lentils provide ~9.5g of soluble fibre (combined with breakfast: 16g of daily 25–30g target). Avocado plant sterols (phytosterols) competitively block intestinal cholesterol absorption. Olive oil (MUFA) shifts the LDL profile from small, dense LDL-b to larger, less harmful LDL-a particles.</div>
+          </div>
+          <div class="health-item">
+            <div class="health-icon">❤️</div>
+            <div class="health-text"><strong>Cardiovascular Health:</strong> Folate (85% RDI) helps regulate homocysteine — elevated homocysteine is an independent cardiovascular risk factor. Vitamin E (28% RDI) from avocado prevents LDL oxidation, a key step in atherosclerosis formation.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="meal-section">
+        <div class="section-heading">Cooking Instructions</div>
+        <div class="steps-list">
+          <div class="step"><div class="step-num">1</div><div class="step-text">Peel and dice the onion. Peel and mince the garlic. Peel and roughly chop the carrots. Rinse the red lentils under cold water.</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-text">Heat 1 tsp olive oil in a medium saucepan over medium heat. Add the diced onion and cook 3–4 minutes, stirring, until softened and translucent.</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-text">Add minced garlic, ground cumin, turmeric and black pepper. Stir for 1 minute until fragrant — this blooms the spices and activates the curcumin in turmeric.</div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-text">Add the rinsed lentils, chopped carrots, Mutti polpa tomatoes and 450mL of water. Stir well.</div></div>
+          <div class="step"><div class="step-num">5</div><div class="step-text">Bring to a boil then reduce to a low simmer. Cook uncovered for 18–20 minutes, stirring occasionally, until lentils are completely soft. Add a splash more water if it becomes too thick.</div></div>
+          <div class="step"><div class="step-num">6</div><div class="step-text">Squeeze in juice from ½ lemon. Taste and adjust — no salt needed; the lemon juice provides the brightness.</div></div>
+          <div class="step"><div class="step-num">7</div><div class="step-text">Halve the avocado, remove the stone, and scoop or slice the flesh. Serve dal in a deep bowl with avocado on the side or sliced on top.</div></div>
+        </div>
+        <div class="step-tip"><strong>💡 Tip:</strong> Make a double batch and refrigerate the dal for up to 3 days — it thickens overnight and tastes even better reheated. The avocado should be freshly cut each time.</div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ═══════════════════ MEAL 3 — DINNER ═══════════════════ -->
+  <article class="meal-card">
+    <div class="meal-header">
+      <div>
+        <div class="meal-rank">Meal 3 · Dinner</div>
+        <h2 class="meal-title">🐟 "The Omega Powerhouse" Lemon-Garlic Salmon &amp; Broccoli Brown Rice Bowl</h2>
+        <p class="meal-subtitle">EPA+DHA omega-3 from canned salmon · broccoli sulforaphane (strongest anti-cancer compound) · complete B12 from salmon bones · vitamin D</p>
+        <div class="meal-badges">
+          <span class="badge green">❤️ Omega-3 Heart Health</span>
+          <span class="badge green">🛡️ Anti-Cancer (sulforaphane)</span>
+          <span class="badge green">💊 Vitamin B12 &amp; D</span>
+          <span class="badge green">📊 Low GI</span>
+          <span class="badge green">🥛 Lactose-Free</span>
+          <span class="badge special">⭐ Broccoli $1.50 special</span>
+        </div>
+        <div class="time-row">
+          <span>⏱ Prep: 5 min</span>
+          <span>🔥 Cook: 30 min</span>
+        </div>
+      </div>
+      <div class="meal-cost-block">
+        <div class="cost-label">Meal Cost</div>
+        <div class="cost-value">$4<span class="cost-cents">.27</span></div>
+      </div>
+    </div>
+
+    <div class="meal-body">
+
+      <!-- Ingredients -->
+      <div class="meal-section">
+        <div class="section-heading">Ingredients</div>
+        <table class="ingredients-table">
+          <thead>
+            <tr>
+              <th>Ingredient</th>
+              <th>Quantity</th>
+              <th>Store</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="ing-name">John West Pink Salmon in Spring Water (no added salt)</div>
+                <div class="ing-store">Coles — $2.20/95g · Spring water = lower sodium than brine</div>
+                <div class="ing-note">⚠️ Use spring water variety — salmon with bones provides calcium</div>
+              </td>
+              <td>1 can (95g, drained)</td>
+              <td>Coles</td>
+              <td>$2.20</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Broccoli, whole head (use 200g)</div>
+                <div class="ing-store">Coles — $1.50/~500g head (ON SPECIAL, was $2.50)</div>
+                <div class="ing-note">⭐ On special today — sulforaphane-rich cruciferous</div>
+              </td>
+              <td>200g florets &amp; stem</td>
+              <td>Coles</td>
+              <td>$0.60</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Brown rice, dry</div>
+                <div class="ing-store">ALDI — $2.29/kg · $0.229/100g</div>
+              </td>
+              <td>75g (dry)</td>
+              <td>ALDI</td>
+              <td>$0.17</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Frozen peas</div>
+                <div class="ing-store">ALDI — $1.89/kg · $0.189/100g</div>
+              </td>
+              <td>80g</td>
+              <td>ALDI</td>
+              <td>$0.15</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Garlic, fresh, minced</div>
+                <div class="ing-store">Coles — $1.50/3 bulb pack (shared with lunch)</div>
+              </td>
+              <td>3 cloves (15g)</td>
+              <td>Coles</td>
+              <td>$0.15</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Lemon, fresh juice (remaining ½ from lunch)</div>
+                <div class="ing-store">Coles — shared from lunch lemon (no extra cost)</div>
+              </td>
+              <td>½ lemon (~30mL juice)</td>
+              <td>Coles</td>
+              <td>$0.90</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Olive oil extra virgin</div>
+                <div class="ing-store">ALDI — $4.49/500mL</div>
+              </td>
+              <td>2 tsp (8g)</td>
+              <td>ALDI</td>
+              <td>$0.07</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ing-name">Spices: smoked paprika ½ tsp, black pepper ¼ tsp</div>
+                <div class="ing-store">Pantry staples (no added salt)</div>
+              </td>
+              <td>~3g combined</td>
+              <td>Pantry</td>
+              <td>$0.03</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="total-row">
+          <div class="total-label">Total Meal Cost</div>
+          <div class="total-amount">$4.27</div>
+        </div>
+        <div class="sodium-alert">
+          <div class="na-icon">🧂</div>
+          <div class="na-text">Sodium: <strong>~268mg</strong> (18% of 1,500mg daily target) — salmon in spring water is significantly lower sodium than brine (~190mg vs ~450mg per can)</div>
+        </div>
+      </div>
+
+      <!-- Macros -->
+      <div class="meal-section">
+        <div class="section-heading">Macronutrients (per meal)</div>
+        <div class="macro-grid">
+          <div class="macro-card">
+            <div class="macro-value">606</div>
+            <div class="macro-unit">kcal</div>
+            <div class="macro-name">Energy</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">37<span class="macro-unit">g</span></div>
+            <div class="macro-name">Protein</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">72<span class="macro-unit">g</span></div>
+            <div class="macro-name">Carbs</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">16<span class="macro-unit">g</span></div>
+            <div class="macro-name">Fat (incl. omega-3)</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">13<span class="macro-unit">g</span></div>
+            <div class="macro-name">Fibre</div>
+          </div>
+          <div class="macro-card">
+            <div class="macro-value">5<span class="macro-unit">g</span></div>
+            <div class="macro-name">Sugar (natural)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nutrients -->
+      <div class="meal-section">
+        <div class="section-heading">Key Micronutrients — % of Daily RDI (Australian NRV, adult male)</div>
+        <div class="nutrient-grid">
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin B12</span>
+              <span class="nutrient-pct max">142% ⭐⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin D</span>
+              <span class="nutrient-pct max">110% ⭐⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Omega-3 EPA+DHA</span>
+              <span class="nutrient-pct max">1.5g ⭐⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin C</span>
+              <span class="nutrient-pct max">&gt;100% ⭐⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Vitamin K</span>
+              <span class="nutrient-pct max">&gt;100% ⭐⭐</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Niacin (B3)</span>
+              <span class="nutrient-pct high">77%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:77%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Folate (B9)</span>
+              <span class="nutrient-pct high">50%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Selenium</span>
+              <span class="nutrient-pct high">50%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Calcium (from bones)</span>
+              <span class="nutrient-pct high">27%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:27%"></div></div>
+          </div>
+          <div class="nutrient-row">
+            <div class="nutrient-label-row">
+              <span class="nutrient-name">Magnesium</span>
+              <span class="nutrient-pct high">26%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:26%"></div></div>
+          </div>
+        </div>
+        <p style="font-size:12px; color:var(--text-dim); margin-top:12px;">🥦 Broccoli sulforaphane (from glucosinolates): most potent natural anti-cancer compound identified. Don't overcook — max 4 min to preserve glucosinolates. 🐟 Canned salmon with soft bones is the best budget source of calcium (~178mg/can) and omega-3s.</p>
+      </div>
+
+      <!-- GI -->
+      <div class="meal-section">
+        <div class="section-heading">Glycaemic Index</div>
+        <div class="gi-row">
+          <div class="gi-badge gi-low">📊 Low GI (~45)</div>
+          <p class="gi-note">Brown rice has a GI of ~50 (lower than white rice at 72), while frozen peas are very low GI (~48). The high protein from salmon (37g total meal protein) and fat from olive oil and salmon significantly slow glucose absorption. Broccoli adds negligible carbohydrates. Combined meal GI: approximately 45.</p>
+        </div>
+      </div>
+
+      <!-- Health Benefits -->
+      <div class="meal-section">
+        <div class="section-heading">Health Benefits Addressed</div>
+        <div class="health-list">
+          <div class="health-item">
+            <div class="health-icon">❤️</div>
+            <div class="health-text"><strong>Cardiovascular Health:</strong> EPA and DHA omega-3 fatty acids (1.5g) from salmon are among the most evidence-backed nutrients for heart health. They reduce triglycerides by 15–30%, decrease inflammation (lowering hs-CRP), reduce platelet aggregation risk, and support healthy heart rhythm. AHA recommends two serves of oily fish per week — this dinner provides the equivalent omega-3 of one full serve.</div>
+          </div>
+          <div class="health-item">
+            <div class="health-icon">🛡️</div>
+            <div class="health-text"><strong>Anti-Cancer:</strong> Broccoli's glucosinolates are converted to sulforaphane during chewing — the most extensively studied natural anti-cancer compound, with documented activity against colorectal, breast, and prostate cancers. Garlic's allicin is also anti-carcinogenic. Selenium (50% RDI) from salmon activates glutathione peroxidase, a key antioxidant enzyme that repairs DNA damage.</div>
+          </div>
+          <div class="health-item">
+            <div class="health-icon">🩸</div>
+            <div class="health-text"><strong>Blood Pressure:</strong> Omega-3s directly reduce blood pressure by improving endothelial function and reducing arterial stiffness. Garlic allicin inhibits ACE (angiotensin-converting enzyme), the same mechanism as many blood pressure medications. Very low sodium (268mg) with high potassium from broccoli and peas maintains excellent K:Na balance.</div>
+          </div>
+          <div class="health-item">
+            <div class="health-icon">💊</div>
+            <div class="health-text"><strong>Vitamin B12 &amp; D (Gaps Closed):</strong> This dinner provides 142% of B12 RDI and 110% of Vitamin D RDI — both nutrients typically deficient in plant-heavy diets. Salmon is one of the richest food sources of both. B12 is essential for nerve function and red blood cell production; Vitamin D supports immune function, calcium absorption, and mood regulation.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="meal-section">
+        <div class="section-heading">Cooking Instructions</div>
+        <div class="steps-list">
+          <div class="step"><div class="step-num">1</div><div class="step-text">Start the brown rice first: rinse 75g under cold water, add to a saucepan with 200mL cold water. Bring to a boil, then cover, reduce to lowest heat and simmer 25–28 minutes until water is absorbed. Do not lift the lid during cooking.</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-text">While rice cooks, cut broccoli into small florets. Don't discard the stem — peel it and slice into coins. Mince the garlic cloves.</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-text">With 5 minutes left on the rice, add the frozen peas directly to the rice pot (no need to thaw), replace the lid.</div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-text">Heat 2 tsp olive oil in a frying pan over medium heat. Add minced garlic and cook 30 seconds until fragrant (do not brown).</div></div>
+          <div class="step"><div class="step-num">5</div><div class="step-text">Add broccoli florets and 2 tablespoons of water. Toss to coat in garlic oil. Cover with a lid and steam-fry for 3–4 minutes until broccoli is bright green and tender-crisp. Do NOT overcook — this preserves sulforaphane.</div></div>
+          <div class="step"><div class="step-num">6</div><div class="step-text">Open the salmon can, drain the spring water, and add the salmon to the pan. Flake gently. Add smoked paprika and black pepper. Toss together for 1–2 minutes.</div></div>
+          <div class="step"><div class="step-num">7</div><div class="step-text">Squeeze lemon juice over everything. Serve salmon-broccoli mix over the brown rice and peas. Squeeze any remaining lemon on top.</div></div>
+        </div>
+        <div class="step-tip"><strong>💡 Tip:</strong> Pink canned salmon with soft, edible bones is essential — the bones are the calcium source. Mash them in gently during step 6. If your can says "no bones" it will be lower in calcium.</div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ═══════════════════ DAILY SUMMARY ═══════════════════ -->
+  <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 28px; margin-bottom:32px;">
+    <div style="font-size:18px; font-weight:800; color:var(--white); margin-bottom:18px;">📊 Full Day — Nutritional Summary</div>
+    <div class="macro-grid" style="margin-bottom:20px;">
+      <div class="macro-card">
+        <div class="macro-value" style="color:var(--accent);">$8.79</div>
+        <div class="macro-name">Total Cost</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-value">1,844</div>
+        <div class="macro-unit">kcal</div>
+        <div class="macro-name">Energy</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-value">81<span class="macro-unit">g</span></div>
+        <div class="macro-name">Protein</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-value">232<span class="macro-unit">g</span></div>
+        <div class="macro-name">Total Carbs</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-value">47<span class="macro-unit">g</span></div>
+        <div class="macro-name">Dietary Fibre</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-value">432<span class="macro-unit">mg</span></div>
+        <div class="macro-name">Sodium (29% of limit)</div>
+      </div>
+    </div>
+    <div class="nutrient-grid">
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Vitamin A</span>
+          <span class="nutrient-pct max">260% ⭐⭐</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Vitamin B12</span>
+          <span class="nutrient-pct max">142% ⭐⭐</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Vitamin C</span>
+          <span class="nutrient-pct max">&gt;300% ⭐⭐</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Vitamin D</span>
+          <span class="nutrient-pct max">110% ⭐⭐</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Vitamin K</span>
+          <span class="nutrient-pct max">&gt;250% ⭐⭐</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Folate (B9)</span>
+          <span class="nutrient-pct max">&gt;140% ⭐</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Thiamine (B1)</span>
+          <span class="nutrient-pct high">94%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:94%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Iron</span>
+          <span class="nutrient-pct high">88%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Potassium</span>
+          <span class="nutrient-pct high">88%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Magnesium</span>
+          <span class="nutrient-pct high">77%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:77%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Niacin (B3)</span>
+          <span class="nutrient-pct high">95%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Zinc</span>
+          <span class="nutrient-pct high">44%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:44%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Calcium</span>
+          <span class="nutrient-pct high">27%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:27%"></div></div>
+      </div>
+      <div class="nutrient-row">
+        <div class="nutrient-label-row">
+          <span class="nutrient-name">Omega-3 (EPA+DHA)</span>
+          <span class="nutrient-pct max">1.5g ⭐⭐</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NUTRITIONAL GAPS ═══════════════════ -->
+  <div class="gaps-card">
+    <div class="gaps-title">⚠️ Nutritional Gaps — To Address in Future Days</div>
+    <div class="gap-item">
+      <div class="gap-label">Calcium (27%)</div>
+      <div class="gap-note">Main gap today. Addressed by eating the soft salmon bones (mash them in). Next meal plan should include sardines in tomato sauce (entire can with bones = ~350mg calcium), or fortified plant milk. Target 3–4 canned fish days per week for non-dairy calcium.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-label">Zinc (44%)</div>
+      <div class="gap-note">Moderately low. Next plan should include red meat, shellfish (oysters are exceptional), or pumpkin seeds. Zinc is higher in animal products; today's plant-based zinc from oats and lentils is well-absorbed when combined with vitamin C (which today is exceptional).</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-label">Iodine</div>
+      <div class="gap-note">Not tracked today but important. Canned seafood contributes some iodine. Best sources: iodine-fortified bread (check label for "iodised salt"), seaweed, or eggs. Plan to include these in next days.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-label">Vitamin B2 (Riboflavin)</div>
+      <div class="gap-note">Salmon and oats contribute some B2 but total is approximately 50–60% of RDI today. Next plan should include eggs (excellent B2 source, $0.46 each) to close this gap — also boosts choline and vitamin D further.</div>
+    </div>
+  </div>
+
   <!-- ═══════════════════ SHOPPING LIST ═══════════════════ -->
-  <section class="shopping-section">
+  <p class="section-title" style="margin-top:40px;">Daily Shopping List — What to Buy Today</p>
+  <div class="shopping-card">
     <div class="shopping-header">
-      <h2 class="shopping-title">🛒 Today's Shopping List</h2>
-      <div class="shopping-total">Total: $6.19</div>
+      <div class="shopping-title">🛒 All 3 Meals Consolidated</div>
+      <div class="shopping-total">Grand Total: ~$22–28*</div>
+    </div>
+    <p style="padding:0 28px 14px; font-size:12px; color:var(--text-dim);">*Full pack purchase prices shown (most items yield multiple serves — leftovers reduce cost of future meals significantly)</p>
+
+    <div class="store-group">
+      <div class="store-name">🔴 ALDI</div>
+      <div class="shop-item">
+        <span class="shop-item-name">Rolled Oats — 1kg bag</span>
+        <span class="shop-item-meta">80g used today</span>
+        <span class="shop-item-price">$2.49</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Bananas — buy 2–3 individual</span>
+        <span class="shop-item-meta">1 used today</span>
+        <span class="shop-item-price">~$0.75</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Red Lentils — 500g bag</span>
+        <span class="shop-item-meta">80g used today</span>
+        <span class="shop-item-price">$1.99</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Carrots — 1kg bag</span>
+        <span class="shop-item-meta">160g used today</span>
+        <span class="shop-item-price">$1.29</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Brown Onions — 1kg bag</span>
+        <span class="shop-item-meta">80g used today</span>
+        <span class="shop-item-price">$1.29</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Brown Rice — 1kg bag</span>
+        <span class="shop-item-meta">75g used today</span>
+        <span class="shop-item-price">$2.29</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Frozen Peas — 1kg bag</span>
+        <span class="shop-item-meta">80g used today</span>
+        <span class="shop-item-price">$1.89</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Olive Oil Extra Virgin — 500mL</span>
+        <span class="shop-item-meta">12g used today</span>
+        <span class="shop-item-price">$4.49</span>
+      </div>
+      <div class="store-subtotal">ALDI total (full packs): <span>~$16.48</span></div>
     </div>
 
     <div class="store-group">
-      <div class="store-name">ALDI</div>
-      <div class="shop-item"><span class="shop-item-name">Rolled oats 1kg <span class="shop-note">use 80g today</span></span><span class="shop-item-price">$2.49</span></div>
-      <div class="shop-item"><span class="shop-item-name">Bananas <span class="shop-note">use 120g today</span></span><span class="shop-item-price">$2.49/kg</span></div>
-      <div class="shop-item"><span class="shop-item-name">Natural yoghurt 500g <span class="shop-note">use 100g today</span></span><span class="shop-item-price">$2.99</span></div>
-      <div class="shop-item"><span class="shop-item-name">Full fat milk 2L <span class="shop-note">use 100mL today</span></span><span class="shop-item-price">$2.59</span></div>
-      <div class="shop-item"><span class="shop-item-name">Carrots 1kg bag <span class="shop-note">use 250g today</span></span><span class="shop-item-price">$1.29</span></div>
-      <div class="shop-item"><span class="shop-item-name">Diced tomatoes 400g can <span class="shop-note">use 200g today</span></span><span class="shop-item-price">$0.89</span></div>
-      <div class="shop-item"><span class="shop-item-name">Brown onions 1kg <span class="shop-note">use 100g today</span></span><span class="shop-item-price">$1.29</span></div>
-      <div class="shop-item"><span class="shop-item-name">Red lentils 500g <span class="shop-note">use 100g today</span></span><span class="shop-item-price">$1.99</span></div>
-      <div class="shop-item"><span class="shop-item-name">Frozen peas 1kg <span class="shop-note">use 180g today</span></span><span class="shop-item-price">$1.89</span></div>
-      <div class="shop-item"><span class="shop-item-name">Brown rice 1kg <span class="shop-note">use 80g today</span></span><span class="shop-item-price">$2.29</span></div>
-      <div class="shop-item"><span class="shop-item-name">Olive oil extra virgin 500mL <span class="shop-note">use 13mL today</span></span><span class="shop-item-price">$4.49</span></div>
-      <div class="store-subtotal">ALDI total (today's use only): <span>$2.85</span></div>
+      <div class="store-name">🔴 Coles — Everyday &amp; On Special</div>
+      <div class="shop-item">
+        <span class="shop-item-name">Shepard Avocado, 1 each <span class="shop-special">⭐ ON SPECIAL</span></span>
+        <span class="shop-item-meta">Whole used today</span>
+        <span class="shop-item-price">$1.20</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Broccoli Whole, 1 head <span class="shop-special">⭐ ON SPECIAL</span></span>
+        <span class="shop-item-meta">200g used today, 300g leftover</span>
+        <span class="shop-item-price">$1.50</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Lemon, 1 each <span class="shop-special">⭐ ON SPECIAL</span></span>
+        <span class="shop-item-meta">Whole used today (split across meals)</span>
+        <span class="shop-item-price">$1.80</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Garlic, 3 Bulb Pack</span>
+        <span class="shop-item-meta">25g used today, rest for the week</span>
+        <span class="shop-item-price">$1.50</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Mutti Polpa Tomatoes Finely Chopped 400g <span class="shop-special">⭐ ON SPECIAL</span></span>
+        <span class="shop-item-meta">200g used today, 200g leftover</span>
+        <span class="shop-item-price">$1.60</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">John West Pink Salmon in Spring Water 95g</span>
+        <span class="shop-item-meta">Whole can used today</span>
+        <span class="shop-item-price">$2.20</span>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-name">Bega Peanut Butter Smooth 470g <span class="shop-special">⭐ ON SPECIAL</span></span>
+        <span class="shop-item-meta">24g used today, rest for future breakfasts</span>
+        <span class="shop-item-price">$5.50</span>
+      </div>
+      <div class="store-subtotal">Coles total: <span>~$15.30</span></div>
     </div>
-
-    <div class="store-group">
-      <div class="store-name">Coles</div>
-      <div class="shop-item"><span class="shop-item-name">John West Pink Salmon 95g can</span><span class="shop-item-price">$2.20</span></div>
-      <div class="shop-item"><span class="shop-item-name">Broccoli whole head (~500g) <span class="shop-note">ON SPECIAL — $1.50</span></span><span class="shop-item-price">$1.50</span></div>
-      <div class="shop-item"><span class="shop-item-name">Garlic 3-bulb pack <span class="shop-note">use 15g today</span></span><span class="shop-item-price">$1.50</span></div>
-      <div class="store-subtotal">Coles total (today's use only): <span>$3.34</span></div>
-    </div>
-  </section>
+  </div>
 
 </main>
 
 <!-- ══════════════════════ FOOTER ══════════════════════ -->
 <footer>
-  <p>Powered by <strong style="color:var(--text-muted)">AFCD Release 3</strong> nutrient data &nbsp;·&nbsp; Prices from Coles, Woolworths, ALDI &nbsp;·&nbsp; Generated 22 March 2026</p>
-  <p style="margin-top:6px;">Nutritional data sourced from the Australian Food Composition Database (AFCD) Release 3, Food Standards Australia New Zealand (FSANZ).</p>
-  <p style="margin-top:6px;">RDI values based on Australian Nutrient Reference Values (NRVs), NHMRC 2006 (updated 2017). Values for adult male, 70kg reference.</p>
+  <p>Powered by <strong style="color:var(--text-muted)">AFCD Release 3</strong> (Australian Food Composition Database) · Prices from Coles &amp; ALDI · Scraped 22 March 2026</p>
+  <p style="margin-top:6px;">RDIs based on <strong style="color:var(--text-muted)">Australian Nutrient Reference Values (NRVs)</strong> — NHMRC · Adult male reference (70kg)</p>
+  <p style="margin-top:6px;">⚠️ 100% Lactose-Free · 🧂 Daily sodium 432mg (29% of 1,500mg target) · 🥦 Sydney, Australia</p>
   <p style="margin-top:10px;"><a href="../index.html">← Back to all meal plans</a></p>
 </footer>
 
