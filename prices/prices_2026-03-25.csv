@@ -1,0 +1,64 @@
+date,store,product_name,product_id,category,unit,unit_size,price_aud,price_per_100g,on_special,special_price_aud,source_url
+2026-03-25,ALDI,Lemon Each,aldi-lemon-each,fruit-veg,each,120,1.49,1.24,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Lemons 5 Pack,aldi-lemons-5pk,fruit-veg,each,500,5.99,1.20,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Red Seedless Grapes Loose,aldi-red-grapes-loose,fruit-veg,kg,900,4.49,0.499,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Garlic 3 Pack,aldi-garlic-3pk,fruit-veg,each,150,2.99,1.99,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Ginger Loose,aldi-ginger-loose,fruit-veg,kg,120,3.60,2.999,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Gold Sweet Potatoes Loose,aldi-gold-sweet-potato-loose,fruit-veg,kg,450,1.80,0.399,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Hass Avocado Each,aldi-hass-avocado-each,fruit-veg,each,200,1.99,0.995,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Hass Avocados 5 Pack,aldi-hass-avocado-5pk,fruit-veg,each,1000,5.99,0.599,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Kale Bunch,aldi-kale-bunch,fruit-veg,each,250,3.49,1.40,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Kent Pumpkins Loose,aldi-kent-pumpkin-loose,fruit-veg,kg,1000,2.49,0.249,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Lebanese Cucumbers 600g,aldi-lebanese-cucumbers-600g,fruit-veg,g,600,4.49,0.748,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Strawberries 250g,aldi-strawberries-250g,fruit-veg,g,250,3.99,1.596,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-03-25,ALDI,Baby Spinach 120g,aldi-baby-spinach-120g,fruit-veg,g,120,1.99,1.658,false,,https://www.aldi.com.au/products/fruits-vegetables/salads/k/1111111154
+2026-03-25,ALDI,Baby Spinach 280g,aldi-baby-spinach-280g,fruit-veg,g,280,3.99,1.425,false,,https://www.aldi.com.au/products/fruits-vegetables/salads/k/1111111154
+2026-03-25,ALDI,Carrots 1kg,aldi-carrots-1kg,fruit-veg,kg,1000,1.99,0.199,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=2
+2026-03-25,ALDI,Brown Onions 1kg,aldi-brown-onions-1kg,fruit-veg,kg,1000,1.99,0.199,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153
+2026-03-25,ALDI,Broccoli Loose,aldi-broccoli-loose,fruit-veg,kg,340,1.87,0.549,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153
+2026-03-25,ALDI,Baby Broccoli Bunch,aldi-baby-broccoli-bunch,fruit-veg,each,250,2.49,0.996,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153
+2026-03-25,ALDI,Baby Carrots 500g,aldi-baby-carrots-500g,fruit-veg,g,500,1.49,0.298,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153
+2026-03-25,ALDI,Brussels Sprouts 500g,aldi-brussels-sprouts-500g,fruit-veg,g,500,3.99,0.798,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153
+2026-03-25,ALDI,Cabbage Half,aldi-cabbage-half,fruit-veg,each,700,3.49,0.499,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153
+2026-03-25,ALDI,White Cup Mushrooms 200g,aldi-white-mushrooms-200g,fruit-veg,g,200,3.49,1.745,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=3
+2026-03-25,ALDI,White Cup Mushrooms 500g,aldi-white-mushrooms-500g,fruit-veg,g,500,6.29,1.258,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=3
+2026-03-25,ALDI,Zucchini 500g,aldi-zucchini-500g,fruit-veg,g,500,1.99,0.398,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=3
+2026-03-25,ALDI,Beans 375g,aldi-beans-375g,fruit-veg,g,375,2.99,0.797,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=3
+2026-03-25,ALDI,Sweet Corn 500g,aldi-sweet-corn-500g,fruit-veg,g,500,2.99,0.598,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=2
+2026-03-25,ALDI,Capsicums 750g,aldi-capsicums-750g,fruit-veg,g,750,4.99,0.665,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=2
+2026-03-25,ALDI,Cauliflower Each,aldi-cauliflower-each,fruit-veg,each,800,4.49,0.561,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-vegetables/k/1111111153?page=2
+2026-03-25,ALDI,Cavendish Bananas Loose,aldi-cavendish-bananas-loose,fruit-veg,kg,180,0.81,0.449,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-fruits/k/1111111152?page=2
+2026-03-25,ALDI,Shepard Avocado Each,aldi-shepard-avocado-each,fruit-veg,each,170,0.89,0.524,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-fruits/k/1111111152?page=2
+2026-03-25,ALDI,Shepard Avocados 5 Pack,aldi-shepard-avocado-5pk,fruit-veg,each,850,4.49,0.529,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-fruits/k/1111111152?page=2
+2026-03-25,ALDI,Navel Oranges 3kg,aldi-navel-oranges-3kg,fruit-veg,kg,3000,7.49,0.250,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-fruits/k/1111111152
+2026-03-25,ALDI,Packham Pears 1kg,aldi-packham-pears-1kg,fruit-veg,kg,1000,3.99,0.399,false,,https://www.aldi.com.au/products/fruits-vegetables/fresh-fruits/k/1111111152
+2026-03-25,ALDI,Pork Mince 500g,aldi-pork-mince-500g,meat-seafood,g,500,4.99,0.998,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000
+2026-03-25,ALDI,RSPCA Chicken Thigh Bulk,aldi-rspca-chicken-thigh-bulk,meat-seafood,kg,1157,15.38,1.329,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000
+2026-03-25,ALDI,Chicken Drumsticks Bulk 2kg,aldi-chicken-drumsticks-bulk-2kg,meat-seafood,kg,2000,7.29,0.365,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000
+2026-03-25,ALDI,Free Range Chicken Whole,aldi-free-range-chicken-whole,meat-seafood,kg,1700,8.48,0.499,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000?page=4
+2026-03-25,ALDI,Chicken Breast Bulk Pack,aldi-chicken-breast-bulk,meat-seafood,kg,1380,15.17,1.099,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000
+2026-03-25,ALDI,3 Star Beef Mince 500g,aldi-beef-mince-3star-500g,meat-seafood,g,500,7.49,1.498,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000
+2026-03-25,ALDI,Barramundi Fillets 2 Pack 260g,aldi-barramundi-fillets-260g,meat-seafood,g,260,10.99,4.227,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000?page=4
+2026-03-25,ALDI,Lodge Farms Free Range Eggs 600g,aldi-free-range-eggs-600g,dairy-eggs,g,600,5.99,0.998,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000?page=7
+2026-03-25,ALDI,Lodge Farms Free Range Eggs 700g,aldi-free-range-eggs-700g,dairy-eggs,g,700,6.19,0.884,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000?page=7
+2026-03-25,ALDI,Lodge Farms Barn Laid Eggs 700g,aldi-barn-laid-eggs-700g,dairy-eggs,g,700,5.29,0.756,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000?page=7
+2026-03-25,ALDI,Inner Goodness Soy Milk Regular 1L,aldi-soy-milk-regular-1l,dairy-eggs,L,1000,1.59,0.159,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000
+2026-03-25,ALDI,Farmadale Lactose Free Milk 1L,aldi-lactose-free-milk-1l,dairy-eggs,L,1000,2.99,0.299,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000?page=3
+2026-03-25,ALDI,Farmadale Lactose Free Full Cream Milk 2L,aldi-lactose-free-milk-2l,dairy-eggs,L,2000,4.69,0.235,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000?page=3
+2026-03-25,ALDI,Inner Goodness Organic Almond Milk 1L,aldi-almond-milk-1l,dairy-eggs,L,1000,2.29,0.229,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000?page=3
+2026-03-25,ALDI,Zymil Lactose Free Thickened Cream 300ml,aldi-zymil-lactose-free-cream-300ml,dairy-eggs,mL,300,4.19,1.397,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000?page=7
+2026-03-25,ALDI,Remano Italian Diced Tomatoes 400g,aldi-remano-diced-tomatoes-400g,pantry,g,400,0.95,0.238,false,,https://www.aldi.com.au/products/pantry/k/970000000
+2026-03-25,ALDI,New Season Sliced Beetroot 425g,aldi-sliced-beetroot-425g,pantry,g,425,1.25,0.294,false,,https://www.aldi.com.au/products/pantry/k/970000000?page=5
+2026-03-25,ALDI,Long Grain Rice 2kg,aldi-long-grain-rice-2kg,pantry,kg,2000,3.59,0.180,false,,https://www.aldi.com.au/products/pantry/k/970000000
+2026-03-25,ALDI,Jasmine Rice 1kg,aldi-jasmine-rice-1kg,pantry,kg,1000,3.19,0.319,false,,https://www.aldi.com.au/products/pantry/k/970000000
+2026-03-25,ALDI,Basmati Rice 1kg,aldi-basmati-rice-1kg,pantry,kg,1000,3.99,0.399,false,,https://www.aldi.com.au/products/pantry/k/970000000
+2026-03-25,ALDI,Bramwells Smooth Peanut Butter 500g,aldi-bramwells-pb-smooth-500g,pantry,g,500,3.09,0.618,false,,https://www.aldi.com.au/products/pantry/k/970000000?page=5
+2026-03-25,ALDI,Bramwells Crunchy Peanut Butter 500g,aldi-bramwells-pb-crunchy-500g,pantry,g,500,3.09,0.618,false,,https://www.aldi.com.au/products/pantry/k/970000000?page=5
+2026-03-25,ALDI,Ocean Rise Premium Red Salmon 105g,aldi-ocean-rise-red-salmon-105g,pantry,g,105,3.79,3.610,false,,https://www.aldi.com.au/products/pantry/k/970000000?page=5
+2026-03-25,ALDI,Remano Tomato Paste 500g,aldi-remano-tomato-paste-500g,pantry,g,500,1.39,0.278,false,,https://www.aldi.com.au/products/pantry/k/970000000?page=10
+2026-03-25,ALDI,Oh So Natural Organic EVOO 500mL,aldi-organic-evoo-500ml,pantry,mL,500,8.99,1.798,false,,https://www.aldi.com.au/products/pantry/k/970000000
+2026-03-25,ALDI,Corole Baked Beans in Tomato Sauce 420g,aldi-baked-beans-420g,pantry,g,420,1.09,0.260,false,,https://www.aldi.com.au/products/pantry/k/970000000
+2026-03-25,ALDI,Olive Oil Extra Virgin 500mL (regular),aldi-evoo-500ml,pantry,mL,500,4.49,0.898,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-25,ALDI,Brown Rice 1kg,aldi-brown-rice-1kg,pantry,kg,1000,2.49,0.249,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-25,ALDI,Red Lentils 500g,aldi-red-lentils-500g,pantry,g,500,1.69,0.338,false,,receipt-aldi-balgowlah-2026-03-22
+2026-03-25,ALDI,Oats Rolled 1kg,aldi-oats-rolled-1kg,pantry,kg,1000,2.49,0.249,false,,receipt-aldi-balgowlah-2026-03-22
