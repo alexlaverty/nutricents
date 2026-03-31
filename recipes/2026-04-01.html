@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriCents — 1 April 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --surface2: #222222;
+      --border: #2a2a2a;
+      --accent: #4ecca3;
+      --accent-dim: rgba(78,204,163,0.12);
+      --accent-dim2: rgba(78,204,163,0.06);
+      --text: #e8e8e8;
+      --text-muted: #888888;
+      --text-dim: #555555;
+      --white: #ffffff;
+      --warning: #f0a500;
+      --red: #e05555;
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: linear-gradient(180deg, #0a0a0a 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .logo-mark {
+      width: 44px; height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 20px; color: #0f0f0f;
+    }
+
+    .logo-name {
+      font-size: 28px; font-weight: 800; color: var(--white);
+      letter-spacing: -0.5px;
+    }
+    .logo-name span { color: var(--accent); }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      border: 1px solid rgba(78,204,163,0.25);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 28px;
+    }
+
+    .daily-stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stat { text-align: center; }
+    .stat-value {
+      font-size: 26px; font-weight: 800; color: var(--accent);
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .stat-divider {
+      width: 1px; height: 40px;
+      background: var(--border);
+    }
+
+    /* ── Health Summary ── */
+    .health-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--accent-dim2);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 99px;
+    }
+    .badge.green {
+      background: var(--accent-dim);
+      color: var(--accent);
+      border: 1px solid rgba(78,204,163,0.2);
+    }
+    .badge.special {
+      background: rgba(240,165,0,0.1);
+      color: var(--warning);
+      border: 1px solid rgba(240,165,0,0.2);
+    }
+    .badge.yellow {
+      background: rgba(240,165,0,0.1);
+      color: var(--warning);
+      border: 1px solid rgba(240,165,0,0.2);
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Meal Card ── */
+    .meal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+
+    .meal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 28px 28px 24px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(78,204,163,0.04) 0%, transparent 60%);
+    }
+
+    .meal-rank {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .meal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .meal-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .meal-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .time-row {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .meal-cost-block {
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .cost-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .cost-value {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .cost-cents { font-size: 24px; }
+
+    .meal-section {
+      padding: 22px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .meal-section:last-child { border-bottom: none; }
+
+    .section-heading {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* ── Ingredients Table ── */
+    .ingredients-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .ingredients-table thead tr {
+      border-bottom: 1px solid var(--border);
+    }
+    .ingredients-table th {
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-dim);
+      padding: 0 8px 10px 0;
+    }
+    .ingredients-table th:last-child { text-align: right; }
+
+    .ingredients-table tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .ingredients-table tbody tr:last-child { border-bottom: none; }
+    .ingredients-table td {
+      padding: 10px 8px 10px 0;
+      vertical-align: top;
+    }
+    .ingredients-table td:last-child { text-align: right; color: var(--accent); font-weight: 700; }
+
+    .ing-name { color: var(--text); font-weight: 500; }
+    .ing-store { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .ing-note { font-size: 11px; color: var(--warning); margin-top: 2px; }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .total-label { font-size: 13px; font-weight: 700; color: var(--text); }
+    .total-amount { font-size: 22px; font-weight: 800; color: var(--accent); }
+
+    /* ── Sodium Alert ── */
+    .sodium-alert {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(78,204,163,0.06);
+      border: 1px solid rgba(78,204,163,0.15);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-top: 14px;
+    }
+    .sodium-alert.warn {
+      background: rgba(240,165,0,0.07);
+      border-color: rgba(240,165,0,0.2);
+    }
+    .na-icon { font-size: 20px; flex-shrink: 0; }
+    .na-text { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+    .na-text strong { color: var(--accent); }
+    .sodium-alert.warn .na-text strong { color: var(--warning); }
+
+    /* ── Macros ── */
+    .macro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    @media (min-width: 500px) {
+      .macro-grid { grid-template-columns: repeat(6, 1fr); }
+    }
+
+    .macro-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 10px;
+      text-align: center;
+    }
+    .macro-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .macro-unit { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+    .macro-name { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); margin-top: 5px; }
+
+    /* ── Nutrients ── */
+    .nutrient-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+
+    .nutrient-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+
+    .nutrient-name { font-size: 12px; color: var(--text-muted); }
+    .nutrient-pct { font-size: 12px; font-weight: 700; }
+    .nutrient-pct.high { color: var(--accent); }
+    .nutrient-pct.max { color: #f0a500; }
+    .nutrient-pct.low { color: var(--text-dim); }
+
+    .bar-track {
+      height: 6px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 99px;
+      max-width: 100%;
+    }
+
+    .bar-fill.max { background: var(--warning); }
+
+    /* ── GI ── */
+    .gi-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .gi-badge {
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 99px;
+    }
+    .gi-low { background: rgba(78,204,163,0.12); color: var(--accent); border: 1px solid rgba(78,204,163,0.25); }
+    .gi-medium { background: rgba(240,165,0,0.12); color: var(--warning); border: 1px solid rgba(240,165,0,0.25); }
+    .gi-note { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── Health Benefits ── */
+    .health-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .health-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+    .health-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .health-content { }
+    .health-title { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+    .health-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+
+    /* ── Steps ── */
+    .steps-list { display: flex; flex-direction: column; gap: 14px; }
+    .step-item { display: flex; gap: 14px; align-items: flex-start; }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(78,204,163,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 800; color: var(--accent);
+      margin-top: 1px;
+    }
+    .step-text { font-size: 14px; color: var(--text); line-height: 1.65; }
+    .step-text strong { color: var(--white); }
+
+    /* ── Shopping List ── */
+    .shopping-section {
+      margin-top: 60px;
+    }
+
+    .shopping-store-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .shopping-store-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 22px;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid var(--border);
+    }
+    .store-name { font-size: 14px; font-weight: 800; color: var(--white); }
+    .store-subtotal { font-size: 14px; font-weight: 700; color: var(--accent); }
+
+    .shopping-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 13px;
+    }
+    .shopping-item:last-child { border-bottom: none; }
+    .shop-ing-name { color: var(--text); }
+    .shop-ing-detail { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .shop-ing-price { color: var(--accent); font-weight: 700; white-space: nowrap; margin-left: 16px; }
+
+    .grand-total-box {
+      background: var(--accent-dim);
+      border: 1px solid rgba(78,204,163,0.25);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .gt-label { font-size: 15px; font-weight: 700; color: var(--white); }
+    .gt-note { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+    .gt-amount { font-size: 32px; font-weight: 800; color: var(--accent); }
+
+    /* ── Back link ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-dim);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      .site-header { padding: 32px 16px 28px; }
+      .daily-stats { gap: 20px; }
+      .meal-header { flex-direction: column; gap: 16px; }
+      .meal-cost-block { text-align: left; }
+      .meal-section { padding: 18px 18px; }
+      .cost-value { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="site-header">
+  <a href="../index.html" style="text-decoration:none">
+    <div class="logo">
+      <div class="logo-mark">N</div>
+      <div class="logo-name">Nutri<span>Cents</span></div>
+    </div>
+  </a>
+  <p class="tagline">Cheapest possible nutritious meals for Australians</p>
+  <div class="date-badge">Wednesday 1 April 2026</div>
+
+  <div class="daily-stats">
+    <div class="stat">
+      <div class="stat-value">$18.31</div>
+      <div class="stat-label">3-Meal Total</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-value">~1,580</div>
+      <div class="stat-label">kcal</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-value">765mg</div>
+      <div class="stat-label">Sodium (51%)</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-value">40g</div>
+      <div class="stat-label">Dietary Fibre</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-value">89g</div>
+      <div class="stat-label">Protein</div>
+    </div>
+  </div>
+</header>
+
+<!-- Health summary bar -->
+<div class="health-summary">
+  <span class="badge green">❤️ Cardiovascular</span>
+  <span class="badge green">🩸 Blood Pressure</span>
+  <span class="badge green">🛡️ Anti-Cancer (lycopene + allicin + sulforaphane)</span>
+  <span class="badge green">📉 Lower LDL (soluble fibre + omega-3)</span>
+  <span class="badge green">📊 Low GI All Day</span>
+  <span class="badge green">🥛 100% Lactose-Free</span>
+  <span class="badge green">🧂 765mg Sodium — 51% daily limit</span>
+  <span class="badge green">🐟 Omega-3 ~2g (sardines, first use)</span>
+  <span class="badge green">🎃 Pumpkin (first use)</span>
+  <span class="badge green">🫑 Capsicum (first use)</span>
+</div>
+
+<!-- ══════════════════════ MAIN ══════════════════════ -->
+<main>
+  <a href="../index.html" class="back-link">← All meal plans</a>
+
+  <p class="section-title">Set 1 — 3 Meals · Wednesday 1 April 2026</p>
+
+  <!-- ════════════════════════════════════════
+       MEAL 1 — CHEAPEST
+       Scrambled Eggs with Capsicum, Spinach & Avocado
+  ════════════════════════════════════════ -->
+  <article class="meal-card">
+    <div class="meal-header">
+      <div>
+        <div class="meal-rank">🥇 Meal 1 of 3 — Cheapest · Breakfast</div>
+        <h2 class="meal-title">🥚 Scrambled Eggs with Capsicum, Spinach &amp; Avocado</h2>
+        <p class="meal-subtitle">High-choline, vitamin-C-packed scramble with avocado for heart-healthy monounsaturated fats. Capsicum makes its debut for the week — one of the richest vitamin C sources available.</p>
+        <div class="meal-badges">
+          <span class="badge green">❤️ Heart Health</span>
+          <span class="badge green">🧠 Choline + B12</span>
+          <span class="badge green">💪 Vit C 122% RDI</span>
+          <span class="badge green">🥑 Healthy Fats</span>
+          <span class="badge green">📊 Very Low GI</span>
+          <span class="badge green">🧂 230mg Sodium</span>
+        </div>
+        <div class="time-row">
+          <span>⏱ Prep: 5 min</span>
+          <span>🍳 Cook: 8 min</span>
+        </div>
+      </div>
+      <div class="meal-cost-block">
+        <div class="cost-label">Meal Cost</div>
+        <div class="cost-value">$5<span class="cost-cents">.46</span></div>
+        <div style="font-size:11px;color:var(--text-dim);margin-top:6px">+ pantry olive oil</div>
+      </div>
+    </div>
+
+    <!-- Ingredients -->
+    <div class="meal-section">
+      <div class="section-heading">Ingredients</div>
+      <table class="ingredients-table">
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Qty</th>
+            <th>Store</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="ing-name">Cage Free Eggs (12-pack, 700g)</div>
+              <div class="ing-store">$5.70/dozen = $0.475/egg</div>
+            </td>
+            <td>3 eggs</td>
+            <td>Coles</td>
+            <td>$1.43</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Green Capsicum loose</div>
+              <div class="ing-store">~250g whole / use ½ here, ½ in Meal 3</div>
+            </td>
+            <td>½ (~125g)</td>
+            <td>ALDI</td>
+            <td>$1.00</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Baby Spinach (120g bag)</div>
+              <div class="ing-store">Split evenly with Meal 3</div>
+            </td>
+            <td>60g</td>
+            <td>Coles</td>
+            <td>$1.50</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Hass Avocado</div>
+              <div class="ing-store">Use ½ today; refrigerate other half</div>
+            </td>
+            <td>½ avocado</td>
+            <td>ALDI</td>
+            <td>$1.00</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Lemon</div>
+              <div class="ing-store">Use ½ here, ½ in Meal 3</div>
+            </td>
+            <td>½ lemon</td>
+            <td>Coles</td>
+            <td>$0.50</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Minced Garlic (jar 250g)</div>
+              <div class="ing-store">$1.25/jar; small amount used</div>
+            </td>
+            <td>1 tsp (5g)</td>
+            <td>Coles</td>
+            <td>$0.03</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Extra Virgin Olive Oil</div>
+              <div class="ing-store">Pantry staple — price not included</div>
+              <div class="ing-note">Price unavailable — check pantry</div>
+            </td>
+            <td>1 tbsp (15mL)</td>
+            <td>Pantry</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="total-row">
+        <span class="total-label">Meal Total (confirmed prices)</span>
+        <span class="total-amount">$5.46</span>
+      </div>
+      <div class="sodium-alert">
+        <span class="na-icon">🧂</span>
+        <div class="na-text"><strong>230mg sodium</strong> — 15% of 1,500mg daily target. Naturally low: no added salt, eggs provide baseline sodium only. Boosted with lemon + garlic for flavour.</div>
+      </div>
+    </div>
+
+    <!-- Macros -->
+    <div class="meal-section">
+      <div class="section-heading">Macronutrients</div>
+      <div class="macro-grid">
+        <div class="macro-card">
+          <div class="macro-value">552</div>
+          <div class="macro-unit">kcal</div>
+          <div class="macro-name">Calories</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">24<span class="macro-unit">g</span></div>
+          <div class="macro-name">Protein</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">11<span class="macro-unit">g</span></div>
+          <div class="macro-name">Carbs</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">46<span class="macro-unit">g</span></div>
+          <div class="macro-name">Total Fat</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">10<span class="macro-unit">g</span></div>
+          <div class="macro-name">Fibre</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">3<span class="macro-unit">g</span></div>
+          <div class="macro-name">Sugar</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Micronutrients -->
+    <div class="meal-section">
+      <div class="section-heading">Micronutrient Coverage (% Australian NRV)</div>
+      <div class="nutrient-grid">
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin C (from capsicum)</span>
+            <span class="nutrient-pct high">122%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin K (spinach)</span>
+            <span class="nutrient-pct max">183%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Folate (eggs + spinach + avocado)</span>
+            <span class="nutrient-pct high">90%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Choline (eggs)</span>
+            <span class="nutrient-pct high">87%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:87%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Selenium (eggs)</span>
+            <span class="nutrient-pct high">64%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:64%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin B12 (eggs)</span>
+            <span class="nutrient-pct high">71%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:71%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin E (avocado + eggs)</span>
+            <span class="nutrient-pct high">25%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:25%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Potassium (avocado + spinach)</span>
+            <span class="nutrient-pct high">17%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:17%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Iron (spinach + eggs)</span>
+            <span class="nutrient-pct high">20%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Riboflavin B2 (eggs)</span>
+            <span class="nutrient-pct high">45%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Pantothenic acid B5 (eggs + avocado)</span>
+            <span class="nutrient-pct high">48%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:48%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Biotin B7 (eggs)</span>
+            <span class="nutrient-pct high">55%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GI -->
+    <div class="meal-section">
+      <div class="section-heading">Glycaemic Index</div>
+      <div class="gi-row">
+        <span class="gi-badge gi-low">Very Low GI (~15)</span>
+        <p class="gi-note">Eggs, avocado, and leafy greens contain negligible digestible starch. Capsicum provides fibre-rich carbohydrates that are digested slowly. This meal produces virtually no blood sugar spike — ideal for maintaining insulin sensitivity.</p>
+      </div>
+    </div>
+
+    <!-- Health Benefits -->
+    <div class="meal-section">
+      <div class="section-heading">Health Benefits</div>
+      <div class="health-list">
+        <div class="health-item">
+          <span class="health-icon">❤️</span>
+          <div class="health-content">
+            <div class="health-title">Cardiovascular Health</div>
+            <div class="health-desc">Avocado provides ~2g oleic acid (MUFA) per serve — the same heart-healthy fat found in olive oil. Combined with egg phospholipids and low saturated fat profile, this breakfast supports healthy lipid metabolism.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">🩸</span>
+          <div class="health-content">
+            <div class="health-title">Blood Pressure</div>
+            <div class="health-desc">820mg potassium from avocado + spinach helps counter sodium's blood pressure effects. Only 230mg sodium. Magnesium from spinach supports vascular relaxation.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">🛡️</span>
+          <div class="health-content">
+            <div class="health-title">Anti-Cancer (Allicin + Vitamin C)</div>
+            <div class="health-desc">Garlic provides allicin — a sulphur compound with anti-cancer and anti-inflammatory properties. Capsicum delivers 110mg vitamin C which neutralises free radicals and supports immune-mediated tumour surveillance.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">🧠</span>
+          <div class="health-content">
+            <div class="health-title">Brain &amp; Liver Health (Choline)</div>
+            <div class="health-desc">3 eggs provide ~390mg choline (87% AI). Choline is essential for neurotransmitter synthesis (acetylcholine), liver function, and is often deficient in Western diets. This is one of the best budget sources available.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cooking Instructions -->
+    <div class="meal-section">
+      <div class="section-heading">Cooking Instructions</div>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Prep veg:</strong> Dice ½ capsicum into 1cm pieces. Rinse 60g spinach. Slice ½ avocado, drizzle with a few drops of lemon juice to prevent browning.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Sauté capsicum:</strong> Heat 1 tbsp olive oil in a non-stick pan over medium heat. Add capsicum and cook for 3–4 minutes until slightly softened. Add garlic and cook 30 seconds.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Add spinach:</strong> Toss spinach into the pan and stir until just wilted (about 1 minute). Push everything to the side of the pan.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>Scramble eggs:</strong> Crack 3 eggs directly into the pan. Using a spatula, gently fold and stir over medium-low heat. Remove from heat while still slightly glossy — residual heat will finish them.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-text"><strong>Plate &amp; serve:</strong> Transfer to a plate. Add sliced avocado on the side. Squeeze remaining lemon juice over the avocado. Season with black pepper and fresh herbs if available.</div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════
+       MEAL 2 — MIDDLE
+       Pumpkin & Kale Tomato Egg-Drop Soup
+  ════════════════════════════════════════ -->
+  <article class="meal-card">
+    <div class="meal-header">
+      <div>
+        <div class="meal-rank">🥈 Meal 2 of 3 · Lunch</div>
+        <h2 class="meal-title">🎃 Pumpkin &amp; Kale Tomato Egg-Drop Soup</h2>
+        <p class="meal-subtitle">A warming, anti-cancer powerhouse. Kent pumpkin and carrot deliver extraordinary beta-carotene (Vitamin A precursor). Kale contributes glucosinolates — cancer-fighting compounds unique to cruciferous vegetables. Mutti Polpa tomatoes (no added salt) add lycopene, a potent antioxidant especially protective against prostate and breast cancers.</p>
+        <div class="meal-badges">
+          <span class="badge green">🛡️ Anti-Cancer (lycopene + glucosinolates)</span>
+          <span class="badge green">👁️ Vit A &gt;300% RDI</span>
+          <span class="badge green">🥦 Cruciferous Veg</span>
+          <span class="badge green">🍅 Lycopene (12mg)</span>
+          <span class="badge green">📊 Low-Medium GI</span>
+          <span class="badge green">🧂 290mg Sodium</span>
+        </div>
+        <div class="time-row">
+          <span>⏱ Prep: 10 min</span>
+          <span>🍲 Cook: 22 min</span>
+        </div>
+      </div>
+      <div class="meal-cost-block">
+        <div class="cost-label">Meal Cost</div>
+        <div class="cost-value">$5<span class="cost-cents">.78</span></div>
+        <div style="font-size:11px;color:var(--text-dim);margin-top:6px">+ pantry olive oil &amp; spices</div>
+      </div>
+    </div>
+
+    <!-- Ingredients -->
+    <div class="meal-section">
+      <div class="section-heading">Ingredients</div>
+      <table class="ingredients-table">
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Qty</th>
+            <th>Store</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="ing-name">Kent Pumpkin cut (~800g)</div>
+              <div class="ing-store">$1.60/~800g; use half</div>
+            </td>
+            <td>400g</td>
+            <td>Coles</td>
+            <td>$0.80</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Kale Bunch</div>
+              <div class="ing-store">$2.99/bunch; use ½ bunch (~100g leaves)</div>
+            </td>
+            <td>½ bunch (~100g)</td>
+            <td>ALDI</td>
+            <td>$1.50</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Mutti Polpa Finely Chopped Tomatoes 400g</div>
+              <div class="ing-store">No added salt — confirmed. Use ½ can; refrigerate rest.</div>
+            </td>
+            <td>½ can (200g)</td>
+            <td>Coles</td>
+            <td>$1.15</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Chick Peas 420g</div>
+              <div class="ing-store">Use no-added-salt variety; rinse well before use. Use ½ can.</div>
+              <div class="ing-note">Buy no-added-salt if available; rinse to reduce sodium</div>
+            </td>
+            <td>½ can (~130g drained)</td>
+            <td>Coles</td>
+            <td>$0.50</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Cage Free Eggs (12-pack)</div>
+              <div class="ing-store">From same carton as Meal 1</div>
+            </td>
+            <td>2 eggs</td>
+            <td>Coles</td>
+            <td>$0.95</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Carrot loose (~170g)</div>
+              <div class="ing-store">$0.44/carrot loose</div>
+            </td>
+            <td>1 carrot (~170g)</td>
+            <td>Coles</td>
+            <td>$0.44</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Brown Onion loose (~200g)</div>
+              <div class="ing-store">$0.82/~200g; use ½</div>
+            </td>
+            <td>½ onion (~100g)</td>
+            <td>Coles</td>
+            <td>$0.41</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Minced Garlic (jar)</div>
+              <div class="ing-store">From same jar as Meal 1</div>
+            </td>
+            <td>2 tsp (10g)</td>
+            <td>Coles</td>
+            <td>$0.05</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Extra Virgin Olive Oil</div>
+              <div class="ing-store">Pantry staple</div>
+              <div class="ing-note">Price unavailable — check pantry</div>
+            </td>
+            <td>1 tbsp (15mL)</td>
+            <td>Pantry</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Ground Turmeric, Cumin, Black Pepper</div>
+              <div class="ing-store">Pantry spices — anti-inflammatory</div>
+              <div class="ing-note">Price unavailable — check pantry</div>
+            </td>
+            <td>½ tsp each</td>
+            <td>Pantry</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="total-row">
+        <span class="total-label">Meal Total (confirmed prices)</span>
+        <span class="total-amount">$5.78</span>
+      </div>
+      <div class="sodium-alert">
+        <span class="na-icon">🧂</span>
+        <div class="na-text"><strong>290mg sodium</strong> — 19% of 1,500mg daily target. Mutti Polpa confirmed no added salt. Rinse chickpeas to remove residual brine. Turmeric and cumin add bold flavour without sodium.</div>
+      </div>
+    </div>
+
+    <!-- Macros -->
+    <div class="meal-section">
+      <div class="section-heading">Macronutrients</div>
+      <div class="macro-grid">
+        <div class="macro-card">
+          <div class="macro-value">588</div>
+          <div class="macro-unit">kcal</div>
+          <div class="macro-name">Calories</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">31<span class="macro-unit">g</span></div>
+          <div class="macro-name">Protein</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">63<span class="macro-unit">g</span></div>
+          <div class="macro-name">Carbs</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">24<span class="macro-unit">g</span></div>
+          <div class="macro-name">Total Fat</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">18<span class="macro-unit">g</span></div>
+          <div class="macro-name">Fibre</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">14<span class="macro-unit">g</span></div>
+          <div class="macro-name">Sugar</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Micronutrients -->
+    <div class="meal-section">
+      <div class="section-heading">Micronutrient Coverage (% Australian NRV)</div>
+      <div class="nutrient-grid">
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin A / Beta-carotene (pumpkin + carrot)</span>
+            <span class="nutrient-pct max">&gt;300%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin K (kale)</span>
+            <span class="nutrient-pct max">&gt;300%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin C (kale + tomato)</span>
+            <span class="nutrient-pct high">89%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:89%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Potassium (pumpkin + carrot + chickpeas)</span>
+            <span class="nutrient-pct high">26%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:26%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Iron (chickpeas + kale + eggs)</span>
+            <span class="nutrient-pct high">28%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:28%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Calcium (kale + chickpeas)</span>
+            <span class="nutrient-pct high">20%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Folate (chickpeas + eggs)</span>
+            <span class="nutrient-pct high">55%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Manganese (kale + chickpeas + pumpkin)</span>
+            <span class="nutrient-pct high">70%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Lycopene from Mutti tomatoes</span>
+            <span class="nutrient-pct high">~12mg</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Phosphorus (chickpeas + eggs)</span>
+            <span class="nutrient-pct high">40%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:40%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Zinc (chickpeas + eggs)</span>
+            <span class="nutrient-pct high">22%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:22%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Magnesium (kale + chickpeas)</span>
+            <span class="nutrient-pct high">18%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:18%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GI -->
+    <div class="meal-section">
+      <div class="section-heading">Glycaemic Index</div>
+      <div class="gi-row">
+        <span class="gi-badge gi-low">Low GI (~42 overall)</span>
+        <p class="gi-note">Chickpeas have a very low GI (~28) and dominate the carbohydrate profile. Pumpkin has a moderate GI (~65) but low glycaemic load due to its high water content. Kale and egg protein further slow gastric emptying. Combined GI is firmly low.</p>
+      </div>
+    </div>
+
+    <!-- Health Benefits -->
+    <div class="meal-section">
+      <div class="section-heading">Health Benefits</div>
+      <div class="health-list">
+        <div class="health-item">
+          <span class="health-icon">🛡️</span>
+          <div class="health-content">
+            <div class="health-title">Anti-Cancer (Glucosinolates + Lycopene)</div>
+            <div class="health-desc">Kale is a cruciferous vegetable that produces sulforaphane and other glucosinolates when chewed — compounds that activate Phase 2 detoxification enzymes that neutralise carcinogens. Mutti tomatoes provide ~12mg lycopene, associated with reduced prostate, lung, and breast cancer risk in epidemiological studies.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">👁️</span>
+          <div class="health-content">
+            <div class="health-title">Vision &amp; Immune Health (Vitamin A)</div>
+            <div class="health-desc">The combined beta-carotene from 400g pumpkin and 170g carrot provides over 3× the daily RDI for Vitamin A — essential for maintaining visual acuity (rhodopsin synthesis), mucosal immunity, and epithelial cell integrity.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">📉</span>
+          <div class="health-content">
+            <div class="health-title">Lower LDL Cholesterol (Soluble Fibre)</div>
+            <div class="health-desc">Chickpeas provide ~6g soluble fibre per serving, which binds bile acids in the gut and forces the liver to use cholesterol to produce more — directly lowering circulating LDL. Pumpkin adds pectin (soluble fibre) for additional effect.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">🧬</span>
+          <div class="health-content">
+            <div class="health-title">Anti-Inflammatory (Turmeric + Curcumin)</div>
+            <div class="health-desc">Turmeric contains curcumin which inhibits NF-κB, a master regulator of inflammation. Combined with black pepper (piperine increases curcumin bioavailability by 2,000%), this soup delivers meaningful anti-inflammatory effect at negligible cost.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cooking Instructions -->
+    <div class="meal-section">
+      <div class="section-heading">Cooking Instructions</div>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Prep:</strong> Peel and cube pumpkin into 2cm chunks. Dice onion and carrot. Strip kale leaves from stems; roughly chop. Rinse and drain chickpeas thoroughly under cold water.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Sauté aromatics:</strong> Heat 1 tbsp olive oil in a medium saucepan over medium heat. Add onion and carrot; cook for 4 minutes until softened. Add garlic, turmeric, and cumin; stir for 1 minute until fragrant.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Simmer pumpkin:</strong> Add pumpkin, chickpeas, and Mutti tomatoes. Pour in 600mL water. Bring to a boil, then reduce heat and simmer for 15 minutes until pumpkin is tender when pierced with a fork.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>Add kale:</strong> Stir in chopped kale. Cook for 3 minutes — it should be bright green and tender but not mushy. Taste and adjust seasoning with black pepper.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-text"><strong>Egg-drop finish:</strong> Reduce heat to low. Crack 2 eggs into a small bowl and lightly beat. Slowly pour the egg in a thin stream around the pot while stirring gently — the eggs will cook into soft ribbons in about 1 minute.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">6</div>
+          <div class="step-text"><strong>Serve:</strong> Ladle into bowls. The remaining ½ can each of chickpeas and Mutti tomatoes can be stored in the fridge for 3 days for use in other meals.</div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════
+       MEAL 3 — MOST EXPENSIVE
+       Sardine & Lentil Power Bowl
+  ════════════════════════════════════════ -->
+  <article class="meal-card">
+    <div class="meal-header">
+      <div>
+        <div class="meal-rank">🥉 Meal 3 of 3 — Most Substantial · Dinner</div>
+        <h2 class="meal-title">🐟 Sardine &amp; Brown Lentil Power Bowl</h2>
+        <p class="meal-subtitle">Sardines make their first appearance in this meal plan series — an extraordinary budget superfood. One 106g tin of Brunswick Sardines in Spring Water (no added salt) provides nearly a week's supply of Vitamin D, a full day of B12, and ~2g omega-3 fatty acids — all for $3.10. Paired with iron-rich lentils, vitamin-C capsicum (which dramatically boosts iron absorption), and anti-cancer spinach.</p>
+        <div class="meal-badges">
+          <span class="badge green">🐟 Omega-3 ~2g (100% AI)</span>
+          <span class="badge green">☀️ Vitamin D 60% RDI</span>
+          <span class="badge green">🦴 Calcium 22% RDI (sardine bones)</span>
+          <span class="badge green">🩸 Iron + Vit C synergy</span>
+          <span class="badge green">📊 Very Low GI</span>
+          <span class="badge green">🧂 245mg Sodium</span>
+        </div>
+        <div class="time-row">
+          <span>⏱ Prep: 8 min</span>
+          <span>🍳 Cook: 0 min (assembly)</span>
+        </div>
+      </div>
+      <div class="meal-cost-block">
+        <div class="cost-label">Meal Cost</div>
+        <div class="cost-value">$7<span class="cost-cents">.07</span></div>
+        <div style="font-size:11px;color:var(--text-dim);margin-top:6px">+ pantry olive oil &amp; spices</div>
+      </div>
+    </div>
+
+    <!-- Ingredients -->
+    <div class="meal-section">
+      <div class="section-heading">Ingredients</div>
+      <table class="ingredients-table">
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Qty</th>
+            <th>Store</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="ing-name">Brunswick Sardines in Spring Water — No Added Salt 106g</div>
+              <div class="ing-store">🌟 Key item — no added salt label confirmed. Drain water before serving.</div>
+            </td>
+            <td>1 can (106g)</td>
+            <td>Coles</td>
+            <td>$3.10</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Lentils Beans 420g</div>
+              <div class="ing-store">Use ½ can (~210g drained); check for no-added-salt version</div>
+              <div class="ing-note">Rinse well to reduce any residual sodium</div>
+            </td>
+            <td>½ can (~210g drained)</td>
+            <td>Coles</td>
+            <td>$0.50</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Green Capsicum loose</div>
+              <div class="ing-store">Remaining ½ from Meal 1 purchase</div>
+            </td>
+            <td>½ (~125g)</td>
+            <td>ALDI</td>
+            <td>$1.00</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Baby Spinach (120g bag)</div>
+              <div class="ing-store">Remaining 60g from Meal 1 purchase</div>
+            </td>
+            <td>60g</td>
+            <td>Coles</td>
+            <td>$1.50</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Carrot loose (~170g)</div>
+              <div class="ing-store">$0.44/carrot</div>
+            </td>
+            <td>1 carrot (~170g)</td>
+            <td>Coles</td>
+            <td>$0.44</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Lemon</div>
+              <div class="ing-store">Remaining ½ from Meal 1 purchase</div>
+            </td>
+            <td>½ lemon</td>
+            <td>Coles</td>
+            <td>$0.50</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Minced Garlic (jar)</div>
+              <div class="ing-store">From same jar as earlier meals</div>
+            </td>
+            <td>1 tsp (5g)</td>
+            <td>Coles</td>
+            <td>$0.03</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Extra Virgin Olive Oil</div>
+              <div class="ing-store">Pantry staple</div>
+              <div class="ing-note">Price unavailable — check pantry</div>
+            </td>
+            <td>1 tbsp (15mL)</td>
+            <td>Pantry</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ing-name">Ground Cumin, Smoked Paprika, Black Pepper</div>
+              <div class="ing-store">Pantry spices</div>
+              <div class="ing-note">Price unavailable — check pantry</div>
+            </td>
+            <td>½ tsp each</td>
+            <td>Pantry</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="total-row">
+        <span class="total-label">Meal Total (confirmed prices)</span>
+        <span class="total-amount">$7.07</span>
+      </div>
+      <div class="sodium-alert">
+        <span class="na-icon">🧂</span>
+        <div class="na-text"><strong>245mg sodium</strong> — 16% of 1,500mg daily target. Brunswick Sardines NAS (no added salt) label confirmed. Sardines in spring water are significantly lower in sodium than sardines in brine or oil. Lentils provide minimal sodium when rinsed.</div>
+      </div>
+    </div>
+
+    <!-- Macros -->
+    <div class="meal-section">
+      <div class="section-heading">Macronutrients</div>
+      <div class="macro-grid">
+        <div class="macro-card">
+          <div class="macro-value">440</div>
+          <div class="macro-unit">kcal</div>
+          <div class="macro-name">Calories</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">34<span class="macro-unit">g</span></div>
+          <div class="macro-name">Protein</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">35<span class="macro-unit">g</span></div>
+          <div class="macro-name">Carbs</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">16<span class="macro-unit">g</span></div>
+          <div class="macro-name">Total Fat</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">12<span class="macro-unit">g</span></div>
+          <div class="macro-name">Fibre</div>
+        </div>
+        <div class="macro-card">
+          <div class="macro-value">6<span class="macro-unit">g</span></div>
+          <div class="macro-name">Sugar</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Micronutrients -->
+    <div class="meal-section">
+      <div class="section-heading">Micronutrient Coverage (% Australian NRV)</div>
+      <div class="nutrient-grid">
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin B12 (sardines)</span>
+            <span class="nutrient-pct max">&gt;300%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin C (capsicum)</span>
+            <span class="nutrient-pct max">122%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Omega-3 fatty acids (sardines)</span>
+            <span class="nutrient-pct high">~2g</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin D (sardines)</span>
+            <span class="nutrient-pct high">60%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Selenium (sardines)</span>
+            <span class="nutrient-pct high">65%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Iodine (sardines)</span>
+            <span class="nutrient-pct high">53%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:53%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Iron (lentils + spinach + sardines)</span>
+            <span class="nutrient-pct high">45%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Calcium from sardine bones</span>
+            <span class="nutrient-pct high">22%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:22%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Folate (lentils + spinach)</span>
+            <span class="nutrient-pct high">80%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Vitamin K (spinach)</span>
+            <span class="nutrient-pct max">183%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill max" style="width:100%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Niacin B3 (sardines)</span>
+            <span class="nutrient-pct high">55%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+        </div>
+        <div class="nutrient-row">
+          <div class="nutrient-label-row">
+            <span class="nutrient-name">Potassium (lentils + carrot + spinach)</span>
+            <span class="nutrient-pct high">19%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="width:19%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GI -->
+    <div class="meal-section">
+      <div class="section-heading">Glycaemic Index</div>
+      <div class="gi-row">
+        <span class="gi-badge gi-low">Very Low GI (~28)</span>
+        <p class="gi-note">Lentils are one of the lowest-GI foods on the planet (GI ~25–30). Their dense protein and fibre matrix traps starch granules from rapid digestion. Capsicum, spinach, and carrot add virtually no glycaemic load. Sardine fat and protein further slow gastric emptying. This dinner is ideal for overnight blood sugar stability.</p>
+      </div>
+    </div>
+
+    <!-- Health Benefits -->
+    <div class="meal-section">
+      <div class="section-heading">Health Benefits</div>
+      <div class="health-list">
+        <div class="health-item">
+          <span class="health-icon">❤️</span>
+          <div class="health-content">
+            <div class="health-title">Cardiovascular Health (Omega-3 EPA + DHA)</div>
+            <div class="health-desc">Sardines provide ~2g combined EPA and DHA omega-3 fatty acids — meeting the entire adequate intake in one meal. EPA and DHA reduce triglycerides, lower inflammation markers (CRP, IL-6), and have been shown to reduce cardiovascular event risk by 25–35% in multiple large trials.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">☀️</span>
+          <div class="health-content">
+            <div class="health-title">Vitamin D (Rare in Budget Foods)</div>
+            <div class="health-desc">Sardines are one of the only budget foods that provide meaningful Vitamin D — ~6µg per tin (60% AI). Most Australians are deficient despite sunny climate due to sun-avoidance behaviours. Vitamin D supports calcium absorption, immune function, and mood regulation.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">🩸</span>
+          <div class="health-content">
+            <div class="health-title">Iron Absorption Enhancement</div>
+            <div class="health-desc">Lentils and spinach provide substantial non-haem iron (~5mg total). Critically, the 110mg vitamin C from capsicum dramatically enhances non-haem iron absorption — consuming them together multiplies uptake by 3–6×. This combination is more effective for iron levels than either food alone.</div>
+          </div>
+        </div>
+        <div class="health-item">
+          <span class="health-icon">🛡️</span>
+          <div class="health-content">
+            <div class="health-title">Anti-Cancer (Selenium + Allicin)</div>
+            <div class="health-desc">Sardines deliver ~35µg selenium — a trace mineral that activates glutathione peroxidase, one of the body's most potent antioxidant enzymes. High selenium intake is consistently associated with reduced risk of prostate, lung, and colorectal cancers in population studies.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cooking Instructions -->
+    <div class="meal-section">
+      <div class="section-heading">Cooking Instructions (Assembly — No Heat Required)</div>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Prep base:</strong> Drain and rinse lentils thoroughly. Dice capsicum and carrot into small cubes (about 0.5cm). Rinse spinach.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Warm lentils (optional):</strong> For a warm bowl, heat lentils in a saucepan with a splash of water for 3 minutes. For a cold bowl, use straight from the can.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Make dressing:</strong> In a small bowl, whisk together: 1 tbsp olive oil, juice of ½ lemon, 1 tsp minced garlic, ½ tsp cumin, ½ tsp smoked paprika, and black pepper.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>Assemble bowl:</strong> Place spinach as the base. Add lentils, capsicum, and carrot on top. Drain sardines and flake them over the bowl — include the soft bones (they're edible and are your best source of calcium).</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-text"><strong>Dress and serve:</strong> Drizzle the dressing over the entire bowl. Toss gently to combine. The lemon and spice dressing transforms the sardines into a vibrant, flavourful meal.</div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════
+       DAILY SHOPPING LIST
+  ════════════════════════════════════════ -->
+  <div class="shopping-section">
+    <p class="section-title">Daily Shopping List — Wednesday 1 April 2026</p>
+
+    <!-- ALDI -->
+    <div class="shopping-store-group">
+      <div class="shopping-store-header">
+        <span class="store-name">ALDI</span>
+        <span class="store-subtotal">Subtotal: $7.48</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Green Capsicum loose (~250g whole)</div>
+          <div class="shop-ing-detail">Split across Meal 1 (½) and Meal 3 (½)</div>
+        </div>
+        <span class="shop-ing-price">$2.00</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Hass Avocado (1 each)</div>
+          <div class="shop-ing-detail">Use ½ in Meal 1; refrigerate other half</div>
+        </div>
+        <span class="shop-ing-price">$1.99</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Kale Bunch</div>
+          <div class="shop-ing-detail">Use ½ in Meal 2; refrigerate rest for 3–4 days</div>
+        </div>
+        <span class="shop-ing-price">$2.99</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Inner Goodness Soy Milk 1L (if needed)</div>
+          <div class="shop-ing-detail">Optional — for drinks/snacks. Not used in today's recipes.</div>
+        </div>
+        <span class="shop-ing-price">$1.59</span>
+      </div>
+    </div>
+
+    <!-- Coles -->
+    <div class="shopping-store-group">
+      <div class="shopping-store-header">
+        <span class="store-name">Coles</span>
+        <span class="store-subtotal">Subtotal: $16.10</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Cage Free Eggs 12-pack (700g)</div>
+          <div class="shop-ing-detail">5 eggs used today (3 in Meal 1, 2 in Meal 2) — 7 remaining</div>
+        </div>
+        <span class="shop-ing-price">$5.70</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Baby Spinach 120g bag</div>
+          <div class="shop-ing-detail">Split between Meal 1 (60g) and Meal 3 (60g) — full bag used</div>
+        </div>
+        <span class="shop-ing-price">$3.00</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Kent Pumpkin cut (~800g)</div>
+          <div class="shop-ing-detail">400g in Meal 2; wrap and refrigerate remainder</div>
+        </div>
+        <span class="shop-ing-price">$1.60</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Mutti Polpa Finely Chopped Tomatoes 400g</div>
+          <div class="shop-ing-detail">No added salt. ½ can in Meal 2; store rest in fridge</div>
+        </div>
+        <span class="shop-ing-price">$2.30</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Chick Peas 420g</div>
+          <div class="shop-ing-detail">½ can in Meal 2 (rinse before use); store rest</div>
+        </div>
+        <span class="shop-ing-price">$1.00</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Lentils Beans 420g</div>
+          <div class="shop-ing-detail">½ can in Meal 3 (rinse before use); store rest</div>
+        </div>
+        <span class="shop-ing-price">$1.00</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Brunswick Sardines Spring Water No Added Salt 106g</div>
+          <div class="shop-ing-detail">Full can in Meal 3. Label confirms no added salt.</div>
+        </div>
+        <span class="shop-ing-price">$3.10</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Carrot loose (~170g × 2)</div>
+          <div class="shop-ing-detail">1 carrot in Meal 2, 1 carrot in Meal 3</div>
+        </div>
+        <span class="shop-ing-price">$0.88</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Lemon (1 each)</div>
+          <div class="shop-ing-detail">½ in Meal 1, ½ in Meal 3</div>
+        </div>
+        <span class="shop-ing-price">$1.00</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Brown Onion loose (~200g)</div>
+          <div class="shop-ing-detail">½ in Meal 2</div>
+        </div>
+        <span class="shop-ing-price">$0.82</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Minced Garlic jar (250g)</div>
+          <div class="shop-ing-detail">Used across all 3 meals; large jar lasts weeks</div>
+        </div>
+        <span class="shop-ing-price">$1.25</span>
+      </div>
+    </div>
+
+    <!-- Pantry Staples -->
+    <div class="shopping-store-group">
+      <div class="shopping-store-header">
+        <span class="store-name">Pantry Staples (price unverified today)</span>
+        <span class="store-subtotal" style="color:var(--warning)">Check pantry</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Extra Virgin Olive Oil</div>
+          <div class="shop-ing-detail">~3 tbsp used across all meals</div>
+        </div>
+        <span class="shop-ing-price" style="color:var(--warning)">—</span>
+      </div>
+      <div class="shopping-item">
+        <div>
+          <div class="shop-ing-name">Ground Turmeric, Cumin, Smoked Paprika, Black Pepper</div>
+          <div class="shop-ing-detail">Used in Meals 2 and 3</div>
+        </div>
+        <span class="shop-ing-price" style="color:var(--warning)">—</span>
+      </div>
+    </div>
+
+    <!-- Grand Total -->
+    <div class="grand-total-box">
+      <div>
+        <div class="gt-label">3-Meal Grand Total (confirmed prices)</div>
+        <div class="gt-note">Olive oil and spices not included — check pantry. Shopping trip covers 2+ days of ingredients due to shared packs.</div>
+      </div>
+      <div class="gt-amount">$18.31</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer>
+  <p>Nutrient data: <strong style="color:var(--text-muted)">AFCD Release 3</strong>, Food Standards Australia New Zealand (FSANZ)</p>
+  <p>RDI values: Australian Nutrient Reference Values (NRVs), NHMRC &nbsp;·&nbsp; Prices: Coles, ALDI (Sydney, Australia) — verified 1 April 2026</p>
+  <p style="margin-top:8px"><a href="../index.html" style="color:var(--accent);text-decoration:none">← Back to all meal plans</a></p>
+</footer>
+
+</body>
+</html>

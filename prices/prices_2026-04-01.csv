@@ -1,0 +1,48 @@
+date,store,product_name,product_id,category,unit,unit_size,price_aud,price_per_100g,on_special,special_price_aud,source_url
+2026-04-01,ALDI,Lemon each,aldi-lemon-each,fruit-veg,each,1,1.49,,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Strawberries 250g,aldi-strawberries-250g,fruit-veg,g,250,4.29,1.716,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Garlic 3-pack,aldi-garlic-3pack,fruit-veg,pack,3,2.99,,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Ginger loose approx 120g,aldi-ginger-loose,fruit-veg,g,120,3.60,3.00,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Gold Sweet Potatoes loose approx 450g,aldi-sweet-potato-loose,fruit-veg,g,450,1.80,0.40,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Green Capsicum loose approx 250g,aldi-capsicum-green-loose,fruit-veg,g,250,2.00,0.80,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Hass Avocado each,aldi-avocado-each,fruit-veg,each,1,1.99,,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Hass Avocados 5-pack,aldi-avocados-5pack,fruit-veg,pack,5,5.99,,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Kale Bunch,aldi-kale-bunch,fruit-veg,bunch,1,2.99,,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Lemons 5-pack,aldi-lemons-5pack,fruit-veg,pack,5,3.99,,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Kent Pumpkin loose approx 1kg,aldi-kent-pumpkin-loose,fruit-veg,kg,1,2.49,0.249,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Gourmet Tomatoes 500g punnet,aldi-gourmet-tomatoes-500g,fruit-veg,g,500,5.99,1.198,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Gourmet Tomatoes loose approx 140g,aldi-gourmet-tomatoes-loose,fruit-veg,g,140,1.19,0.85,false,,https://www.aldi.com.au/products/fruits-vegetables/k/950000000
+2026-04-01,ALDI,Ironbark Pork Mince 500g,aldi-pork-mince-500g,meat-seafood,g,500,4.99,0.998,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000
+2026-04-01,ALDI,Chicken Drumsticks Bulk 2kg,aldi-chicken-drumsticks-2kg,meat-seafood,kg,2,7.29,0.3645,false,,https://www.aldi.com.au/products/meat-seafood/k/940000000
+2026-04-01,ALDI,Inner Goodness Regular Soy Milk 1L,aldi-innergoodness-soymilk-1l,dairy-eggs-fridge,L,1,1.59,0.159,false,,https://www.aldi.com.au/products/dairy-eggs-fridge/k/960000000
+2026-04-01,ALDI,Fresh Tasmanian Salmon Fillets 4-pack 460g,aldi-salmon-fillets-4pack-460g,meat-seafood,g,460,15.99,3.476,true,,https://www.aldi.com.au/products/limited-time-only/k/1588161420755352
+2026-04-01,ALDI,Banana Prawns 400g,aldi-banana-prawns-400g,meat-seafood,g,400,11.99,2.998,true,,https://www.aldi.com.au/products/limited-time-only/k/1588161420755352
+2026-04-01,ALDI,Honey Soy Chicken Drumsticks 1.5kg,aldi-honeysoy-drumsticks-1.5kg,meat-seafood,kg,1.5,6.99,0.466,true,,https://www.aldi.com.au/products/super-savers/k/1588161426952145
+2026-04-01,ALDI,Free Range Whole Chicken approx 1.7kg,aldi-whole-chicken-1.7kg,meat-seafood,kg,1.7,8.48,0.499,false,,https://www.aldi.com.au/products/super-savers/k/1588161426952145
+2026-04-01,Coles,Italian Diced Tomatoes 400g,coles-diced-tomatoes-400g,pantry,g,400,1.10,0.275,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Chick Peas 420g,coles-chickpeas-420g,pantry,g,420,1.00,0.238,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Mutti Polpa Tomatoes Finely Chopped 400g,coles-mutti-polpa-400g,pantry,g,400,2.30,0.575,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Italian Passata 700g,coles-passata-700g,pantry,g,700,2.00,0.286,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Corn Kernels 420g,coles-corn-kernels-420g,pantry,g,420,1.20,0.286,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Beans Red Kidney 420g,coles-red-kidney-beans-420g,pantry,g,420,1.00,0.238,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Lentils Beans 420g,coles-lentils-420g,pantry,g,420,1.00,0.238,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Oats Rolled 900g,coles-rolled-oats-900g,pantry,g,900,1.95,0.217,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,White Vinegar 2L,coles-white-vinegar-2l,pantry,L,2,1.85,0.0925,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Minced Garlic 250g,coles-minced-garlic-250g,pantry,g,250,1.25,0.50,false,,https://www.coles.com.au/browse/pantry
+2026-04-01,Coles,Strawberries 250g,coles-strawberries-250g,fruit-veg,g,250,5.00,2.00,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Carrots 1kg bag,coles-carrots-1kg,fruit-veg,kg,1,1.00,0.10,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Broccoli Medium approx 340g,coles-broccoli-medium,fruit-veg,g,340,2.21,0.65,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Baby Broccoli bunch,coles-baby-broccoli,fruit-veg,bunch,1,2.00,,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Green Capsicum loose approx 220g,coles-capsicum-green-loose,fruit-veg,g,220,1.96,0.89,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Brown Onions loose approx 200g,coles-brown-onion-loose,fruit-veg,g,200,0.82,0.41,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Carrots loose approx 170g,coles-carrot-loose,fruit-veg,g,170,0.44,0.259,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Baby Spinach 120g,coles-baby-spinach-120g,fruit-veg,g,120,3.00,2.50,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Bananas Mini Pack 750g,coles-bananas-750g,fruit-veg,g,750,4.50,0.60,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Sliced Mushrooms 200g,coles-sliced-mushrooms-200g,fruit-veg,g,200,4.00,2.00,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Lemon each,coles-lemon-each,fruit-veg,each,1,1.00,,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Kent Pumpkin cut approx 800g,coles-kent-pumpkin-cut-800g,fruit-veg,g,800,1.60,0.20,false,,https://www.coles.com.au/browse/fruit-vegetables
+2026-04-01,Coles,Cage Free Eggs 12 Pack 700g,coles-cage-free-eggs-12pk,dairy-eggs-fridge,pack,12,5.70,0.814,false,,https://www.coles.com.au/browse/dairy-eggs-fridge/eggs
+2026-04-01,Coles,Free Range Eggs 12 Pack 600g,coles-free-range-eggs-12pk-600g,dairy-eggs-fridge,pack,12,6.20,1.033,false,,https://www.coles.com.au/browse/dairy-eggs-fridge/eggs
+2026-04-01,Coles,Free Range Eggs 12 Pack 700g,coles-free-range-eggs-12pk-700g,dairy-eggs-fridge,pack,12,6.50,0.929,false,,https://www.coles.com.au/browse/dairy-eggs-fridge/eggs
+2026-04-01,Coles,Brunswick Sardines Spring Water No Added Salt 106g,coles-brunswick-sardines-nas-106g,pantry,g,106,3.10,2.925,false,,https://www.coles.com.au/search/products?q=sardines
+2026-04-01,Coles,King Oscar Sardines Olive Oil 45g,coles-king-oscar-sardines-45g,pantry,g,45,2.50,5.556,false,,https://www.coles.com.au/search/products?q=sardines
